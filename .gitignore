@@ -1,0 +1,12 @@
+local_settings.py
+*.pyc
+*.db
+*.flv
+*.wmv
+static-files/100x50
+static-files/content_profile
+.project
+.pydevproject
+.tmp*
+content_226
+.DS_Store
