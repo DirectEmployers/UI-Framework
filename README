@@ -1,0 +1,10 @@
+Global UI Framework
+(C) 2011 DirectEmployers Foundation
+
+Currently in alpha development
+
+/framework
+contains the actual files for inclusion in the UI
+
+/documentation
+Contains all documentation and examples
