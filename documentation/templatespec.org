@@ -1,0 +1,50 @@
+* Template Structure for My.Jobs
+** Naming Conventions
+The following conventions have been used to ensure that my.jobs
+templates remain easy to read and easy for designers and developers to
+identify the correct block or template variable to use.
+
+*** Order of Precidence 
+Predictable naming of HTML classes and ids as well as template blocks
+makes it easier for developers to memorize template structure and
+results in faster, more efficient coding. When selecting a name for a
+template element, look for the most preferred name:
+
+- HTML elements (e.g. <h1>) are preferred over classes and ids.
+- Bootstrap is preferred over JQueryUI
+- JQueryUI is preferred over DirectEmployers
+- DirectEmployers is preferred over Application Specific
+
+*** Bootstrap Elements
+Where possible, the bootstrap naming conventions will be maintained for
+compatibility with documentation and examples. When naming a template
+block that contains a bootstrap element, use the bootstrap name:
+(header-text, main-content-text, sidebar-text).
+
+** Standard Page Blocks
+Because my.jobs is based on the Bootstrap framework's web app layout, every page has the following template blocks:
+
+|-----------+---------+------------------+-------------------+-----------------------------------|
+| topbar    |         |                  |                   | Branding & nav bar                |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+| container |         |                  |                   | Center content on screen.         |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+|           | content |                  |                   | Page Content                      |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+|           |         | page-header      |                   | Structure of page header          |
+|           |         | page-header-text |                   | content of page header            |
+|           |         | main             |                   | structure of main content area    |
+|           |         |                  | messages          | alerts and messages               |
+|           |         |                  | main-text-pre     | text prepended to main content    |
+|           |         |                  | main-text         | main content                      |
+|           |         |                  | main-text-post    | text that goes after main content |
+|           |         | sidebar-a        |                   | Structure of sidebar              |
+|           |         |                  | sidebar-a-text    | sidebar content                   |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+|           | footer  |                  |                   | Structure of footer               |
+|           |         | footer-text      | Content of Footer |                                   |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+| analytics |         |                  |                   | tracking pixels & scripts that go |
+|           |         |                  |                   | above the </body> tag             |
+|-----------+---------+------------------+-------------------+-----------------------------------|
+
