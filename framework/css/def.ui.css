@@ -16,6 +16,10 @@ body{
 h1{
     color: #900;
 }
+/*Tables*/
+.rowTitle{
+    font-weight: bold;
+}
 /*Contant Containers*/
 .hero-unit h1{
     background: #333;
