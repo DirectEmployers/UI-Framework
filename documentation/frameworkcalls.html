@@ -1,16 +1,97 @@
+<!doctype html>
 <html>
-<link href="http://def.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css">
-<script src="http://def.nlx.org/framework/script/def.ui.jquery.core.js"></script>
-<script src="http://def.nlx.org/framework/script/def.ui.jquery.datatables.js"></script>
-<script>
-$(document).ready(function(){
-    $("#fileTable").dataTable({
-        "bPaginate": false,
-        //"bFilter": false
+<head>
+    <link href="http://def.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css">
+    <style>
+    tr:nth-child(2) th{
+        /*-webkit-transform: rotate(-45deg);
+        -webkit-transform-origin: 0% 100%;
+        position: relative;*/
+    }
+    tr:nth-child(2) th div{
+        
+    }
+    .rowTitle aside{
+        display: none;
+    }
+    .rowTitle:hover aside{
+        display: block;
+        position: absolute;
+        margin-left: 250px;    
+        margin-top: -25px;
+    }
+    .rowTitle:hover aside button:before{
+        content: "";
+        border-right: 10px solid rgba(0,0,0,.5);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 5px;
+        left: -15px;
+        
+    }
+    .rowTitle:hover aside button:after{
+        content: "";
+        border: 5px solid rgba(0,0,0,.5);
+        -webkit-border-radius: 10px;
+        width: 160px;
+        height: 29px;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+    }
+    .rowTitle:hover aside:hover button:before{
+        border-right-color: rgba(0,0,0,.8);
+    }
+    .rowTitle:hover aside:hover button:after{
+        border-color: rgba(0,0,0,.8);
+    }
+    .scriptButton{
+        margin-left: 0px;
+    }
+    </style>
+    <script src="http://def.nlx.org/framework/script/def.ui.jquery.core.js"></script>
+    <script src="http://def.nlx.org/framework/script/def.ui.jquery.datatables.js"></script>
+    <script src="http://def.nlx.org/framework/script/def.ui.bootstrap.modal.js"></script>
+    <script>
+    var downLoadFile = "";
+    $(document).ready(function(){
+        $("#fileTable").dataTable({
+            "bPaginate": false,
+             
+        });
+        $(".scriptButton").click(function(){
+            downLoadFile = '&lt;scr'+'ipt src="http://def.nlx.org/foundation/script/';
+            downLoadFile+= $(this).attr("data-file");
+            downLoadFile+= '">&lt;/sc'+'ript>';
+            //
+            $("#fileLink").html(downLoadFile);
+        });
     });
-});
-</script>
+    </script>
+</head>
 <body>
+
+<section>
+<div id="download-modal" class="modal hide fade in">
+        <div class="modal-header">
+            <a href="#" class="close">x</a>
+            <h3>Interface File</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+                <div id="fileLink"></div>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn primary">Primary</a>
+            <a href="#" class="btn secondary">Secondary</a>
+        </div>
+    </div>
+</section>
+<section>
 <table id="fileTable">
 <thead>
     <tr>
@@ -20,7 +101,7 @@ $(document).ready(function(){
         <th colspan="4">jQuery</th>        
         <th colspan="8">Bootstrap</th>
     </tr><tr>
-        <th>foundation</th>
+        <th><div>foundation</div></th>
         <th>swfObject</th>
         <th>jQuery</th>
         <th>UI</th>
@@ -37,264 +118,381 @@ $(document).ready(function(){
     </tr>
 </thead>
 <tbody>
+    <article>
     <tr>
-            <td class='rowTitle'>def.ui.js</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-        </tr><tr>
-            <td class='rowTitle'>def.is.jquery.js</td>        
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.jquery.core.js</td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.jquery.root.js</td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.jquery.ui.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.jquery.datatables.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.swfobject.js</td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.alerts.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.buttons.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.dropdown.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.modal.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.popover.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrapscrollspy.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.tabs.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
-            <td></td>
-        </tr><tr>
-            <td class='rowTitle'>def.ui.bootstrap.twipsy.js</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>X</td>
+        <td class='rowTitle'>def.ui.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr></article><tr>
+        <td class='rowTitle'>def.ui.jquery.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.jquery.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>        
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.jquery.core.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.jquery.core.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.jquery.root.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.jquery.root.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.jquery.ui.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.jquery.ui.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.jquery.datatables.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.jquery.datatables.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.swfobject.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.swfobject.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.alerts.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.alerts.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.buttons.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.buttons.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.dropdown.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.dropdown.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.modal.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.modal.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.popover.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.popover.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.scrollspy.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.scrollspy.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.tabs.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.tabs.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
+        <td></td>
+    </tr><tr>
+        <td class='rowTitle'>def.ui.bootstrap.twipsy.js
+            <aside>
+                <button class="scriptButton span3 btn info" data-file="def.ui.bootstrap.twipsy.js" 
+                    data-controls-modal="download-modal" data-backdrop="true">
+                    Get Tag
+                </button>
+            </aside>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>X</td>
     </tr>
 </tbody>
 </table>
+</section>
+<section>
+    
+</section>
 </body>
 </html>
