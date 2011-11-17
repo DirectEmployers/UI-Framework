@@ -7,12 +7,15 @@ This UI Framework uses the following libraries:
  - swfObject
  - BootstrapJS
 *****************************************************************************-*/
-var loader="def.ui.bootstrap.js";
-var jsSrc = "http://def.nlx.org/framework/script/";
+var loader="def.ui.core.js";
+var jsSrc = "http://js.nlx.org/framework/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
-    "code/bootstrap-dropdown.js"
+    "code/jquery-1.6.4.min.js",
+    "code/jquery-ui.min.js",
+    "code/swfobject.js",
+    "code/foundation.js"
 ];
 
 for(var i=0;i<fileList.length;i++){

@@ -8,11 +8,11 @@ This UI Framework uses the following libraries:
  - BootstrapJS
 *****************************************************************************-*/
 var loader="def.ui.bootstrap.js";
-var jsSrc = "http://def.nlx.org/framework/script/";
+var jsSrc = "http://js.nlx.org/framework/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
-    "code/bootstrap-tabs.js"
+    "code/bootstrap-buttons.js"
 ];
 
 for(var i=0;i<fileList.length;i++){
