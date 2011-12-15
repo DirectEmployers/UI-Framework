@@ -12,8 +12,11 @@ Copyright 2011-12 DirectEmployers Foundation
 
 /*Style overrides below here.*/
 /*Document*/
+html,body{
+	height: 100%;
+	}
 body{
-    font-family: verdana, helvetica, sans-serif; 
+    font-family: arial, helvetica, sans-serif; 
 }
 header{
     background-image: -webkit-linear-gradient(bottom, #999,#fff);
@@ -82,3 +85,87 @@ h1{
 .section p,.section dl,.section ol,.section ul{
     padding: 10px;
 }
+/*Top bar dimensions*/
+.topbar h3 a{
+	padding: 0px 20px;
+	}
+.topbar-inner{
+	background-color: #333;
+	height: 30px;
+	padding: 1px 10px 1px 0px;
+	}
+.topbar form{
+	margin: -6px 0 0 0px;
+	}
+.topbar fieldset{
+	margin-bottom: 0px;
+	padding-top: 1px;
+	}
+.topbar-wrapper {
+	position: relative;
+	height: 40px;
+	margin: 5px 0 15px;
+	}	
+.topbar-wrapper .topbar {
+	position: absolute;
+	margin: 0px;	
+	}	
+.topbar h3 a{
+	background-image: url(http://css.nlx.org/def-static/images/DEFlogo-horz.png);
+	background-repeat: no-repeat;
+	text-indent: -9000px;
+	width: 280px;
+	height: 30px;
+	padding: 0px;
+	}
+
+
+.topbar-wrapper .topbar .topbar-inner{	
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius: 6px;
+	padding: 0 20px 0 40px;
+	}
+.topbar-wrapper .topbar .topbar-inner .container{
+	width: auto;
+	}
+.topbar div > ul, .topbar .nav{
+	margin-left: 20px;
+	}
+.topbar div > ul a, .nav a {
+	padding: 3px 10px 3px 10px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;	
+	margin-top: 2px;
+	}
+.topbar div > ul a:hover, .nav a:hover {
+	background-color: #666;
+	cursor: pointer;
+	}
+.topbar li{
+	line-height: 1;
+	}
+.topbar .btn{
+	color: #000;
+	}
+/*Button dimensions*/
+.btn{
+	padding-top: 6px;
+	padding-bottom: 7px;
+	}
+	
+/*Grid Structure additions*/
+.span-one-fifth{
+	width: 172px;
+	}
+.span-two-fifths{
+	width: 364px;
+	}
+.span-two-fifths input[type=text]{
+	width: 300px;
+	}
+.span-three-fifths{
+	width: 556px;
+	}
+	
