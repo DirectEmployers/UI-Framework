@@ -1,83 +1,207 @@
 <!doctype html>
 <html>
 <head>
+	<title>DEF.UI</title>
     <link href="http://css.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css">
     <script src="http://js.nlx.org/framework/js/def.ui.core.js"></script>
+    <link href="http://png.nlx.org/def-static/images/favicon.ico" rel="shortcut icon">
 </head>
 <body>
-<header><div class="header">
-    <h1>DEF UI Framework</h1>    
-</div></header>    
-<div class="row wrapper">
-    <section><div class="section span8 roundedCorners6" id="jsDocumention">
-        <h2>JavaScript Framework</h2>
-        <p>
-        The most commonly used files are available in the javascript core
-        loader file, def.ui.core.js, which you can use easily by including the
-        following in your &lt;head&gt; section:
-        </p>
-        <blockquote class='roundedCorners6'>&lt;script src="http://js.nlx.org/framework/js/def.ui.core.js">&lt;/script></blockquote>
-        <p>
-        The DEF javascript framework is built on 3 tiers:
-        </p>
-        <dl>
-            <dt>jQuery</dt>
-            <dd>jQuery is a JavaScript library that simplifies and accelerates 
+<div class="topbar">
+	<div class="topbar-inner">
+        <div class="container">
+          <h3><a href="/">DirectEmployers Foundation</a></h3>
+        </div>
+    </div>
+</div>
+<section><div class="section subpage">
+	<div class="wrapper">
+    <div class="row">
+    	<div class="span16">
+        	<h1>DirectEmployersFoundation UI Framework</h1>
+            <p class="columns col2">
+            <b>The DirectEmployers UI Framework (DEF.UI)</b> is a  CSS and JavaScript framework system for rapid prototyping. It is built
+            on two industry standard frameworks - <a href="http://twitter.github.com/bootstrap">Bootstrap</a> and <a href="http://jquery.org">jQuery</a>.
+            <br/><br/>
+            The framework is split into two main components: Logic Components and Presentation Components. The logic component is built on jQuery tools. This 
+            includes jQuery Core, jQuery UI, jQuery Mobile, and jQuery DataTables. The presentation side is built on the bootstrap css and html markup.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span-three-fifths" id="jsDocumention">
+        	<h2 class="h2block">Presentation Component</h2>
+            <p>
+            The DEF CSS framework is built on top of bootstrap, and is extremely easy
+            to include. Just cut and paste the following into your &lt;head&gt; section:
+            </p>
+            <blockquote class='roundedCorners6'>&lt;link href="http://css.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css"></blockquote>
+            
+            <h2 class="h2block">Logic Component</h2>
+            <p>
+            The most commonly used files are available in the javascript core
+            loader file, def.ui.core.js, which you can use easily by including the
+            following in your &lt;head&gt; section:
+            </p>
+            <blockquote class='roundedCorners6'>&lt;script src="http://js.nlx.org/framework/js/def.ui.core.js">&lt;/script></blockquote>
+            <p>
+            The DEF javascript framework is built on 3 tiers:
+            </p>
+            <h3>jQuery</h3>
+            <p>jQuery is a JavaScript library that simplifies and accelerates 
             common JavaScript tags. The DEF UI Framework makes use of jQuery, 
             jQueryUI, and jQueryMobile Libraries.<br/>
-            More info at <a href="http://jquery.org">jquery.org</a></dd>
-            <dt>Bootstrap</dt>
-            <dd>Bootstrap is primarily a CSS library, and is developed by the 
+            More info at <a href="http://jquery.org">jquery.org</a></p>
+            
+            <h4>Modifications to Core jQuery</h4>
+            <table>
+            <tr>
+                <th>Module</th><th>Function</th><th>Modification</th>                    
+            </tr><tr>
+                <td>jQueryUI</td><td>$.autocomplete</td>
+                <td>Added support for custom classes, ids and categories.
+                <h5>New parameters</h5>
+	                <ul>
+                    	<li><b>acClassName</b><br/>
+                        	String Value - class attribute to assign to the autocomplete &gt;ul&lt; object.
+                        </li>
+                        <li><b>acID</b><br/>                        	
+                        	String Value - ID attribute to assign to the autocomplete &gt;ul&lt; object.</li>
+                        <li><b>showCategories</b><br/>
+                        	Boolean - whether or not to display categories. requires a "category" node in the source.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            </table>
+
+            <h3>Bootstrap</h3>
+            <p>Bootstrap is primarily a CSS library, and is developed by the 
             engineering team at Twitter. The DEF UI framework uses the full Bootstrap CSS 
             library as a starting point for all display components, and then builds
             from there to customize for brand and custom components. Bootstrap is
             fully HTML5 and CSS3 compliant.<br/><br/>In addition to the CSS styling,
             the Bootstrap javascript and interactive components are also available.
-            <br/><br/>More info at <a href="http://twitter.github.com/bootstrap/">twitter.github.com/bootstrap/</a></dd>
-            <dt>DEF custom functons</dt>
-            <dd>Every Framework loader loads the foundation core functions in
-            addition to thrid party libraries.</dd>
-        </dl>
-        <p>
-        If you need a more detailed approach, or need to make use of any of the
-        bootstrap automated functionality, then you should use the
-        <a href="js-grid/">JavaScript Loader Grid</a> determine which files
-        you need to incude.
-        </p>   
-    </div></section>
-    
-    
-    <section><div class="section span8 roundedCorners6" id="cssDocumentation">
-        <h2>CSS Framework</h2>
-        <p>
-        The DEF CSS framework is built on top of bootstrap, and is extremely easy
-        to include. Just cut and paste the following into your &lt;head&gt; section:
-        </p>
-        <blockquote class='roundedCorners6'>&lt;link href="http://css.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css"></blockquote>
-        <p> 
-        <b>*NOTE*</b> The CSS framework is still under develepment:
-        <table>
-        <thead>
-            <tr>
-                <th>Component</th><th>State</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Bootstrap Files</td><td>Done</td>
-            </tr>
-            <tr>
-                <td>DEF Core style</td><td>Under development</td>
-            </tr>
-        </tbody>
-        </table>
-        </p>
-    </div></section>
+            <br/><br/>More info at <a href="http://twitter.github.com/bootstrap/">twitter.github.com/bootstrap/</a></p>
+            <h3>DEF custom functions</h3>
+            <p>Every Framework loader loads the foundation core functions in
+            addition to thrid party libraries.</p>
+            <p>
+            If you need a more detailed approach, or need to make use of any of the
+            bootstrap automated functionality, then you should use the
+            <a href="js-grid/">JavaScript Loader Grid</a> determine which files
+            you need to incude.
+            </p>   
+        </div>
+        
+        
+        <div class="span-two-fifths" id="cssDocumentation">
+            <div id="focusBox">
+                <div class="h2block takeover">
+                <h3>Current Framework Status</h3>
+                <p>Last Updated Dec 20, 2011
+                <br/>Version: 0.0.1</p>
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th><th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Presentation</td><td>Finalizing Bootstrap overrides</td>
+                        </tr>
+                        <tr>
+                            <td>Logic</td><td>Ready</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="h2block takeover">
+                <h3>Browser Compatability</h3>
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>Browser</th><th>Support level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Firefox</td><td>Full</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td><td>Full</td>
+                        </tr>
+                        <tr>
+                            <td>Safari</td><td>Full</td>
+                        </tr>
+                        <tr>
+                            <td>IE 9</td>
+                            <td>Some limitations:
+                            	<ul>
+                                	<li>No rounded buttons</li>
+                                    <li>No text shadows</li>                                    
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IE 8</td>
+                            <td>Limited:
+                            	<ul>
+                                	<li>All IE9 limitations</li>
+                                    <li>No rounded corners anywhere</li>
+                                    <li>Simplified element backgrounds</li>
+                                    <li>No CSS gradients</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IE 7</td>
+                            <td>Limited:
+                            	<ul>
+                                	<li>All IE8 limitations</li>
+                                    <li>Some layout issues</li>
+                                    <li>Site is guarenteed functional, but some layouts will not present as polished</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IE 6</td>
+                            <td>Not Supported</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div></section>
     
     
 </div>
 <footer><div class="footer">
-<p>&copy;2011-12 DirectEmployers Foundation</p>
+<div id="bottomTabs">
+	<div class="wrapper">
+    	<div class="row">
+        	
+        </div>
+    </div>
+</div>
+<div class="wrapper" id="bottomLinks">
+    	<div class="row">
+        	<div class="span-two-fifths">
+            	<p class="foundationName"><a href="http://directemployers.org">DirectEmployers <span>Foundation</span></a></p>
+            </div>
+            <div class="span-three-fifths subpageLinks" id="footerSubLinks">
+            	<p class="pull-right">
+                    <a href="http://directemployersfoundation.org/terms/">Terms of Use</a>
+                    <a href="http://directemployersfoundation.org/privacy-policy/">Privacy Policy</a>
+                    <a href="http://directemployersfoundation.org/">&copy; 2012 DirectEmployers Foundation</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </div></footer>
 </body>
 </html>
