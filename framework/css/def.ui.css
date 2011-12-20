@@ -3,6 +3,7 @@
 This system is built on Bootstrap, by twitter.
 
 Copyright 2011-12 DirectEmployers Foundation
+Updated Dec 20 2011
 *******************************************************************************/
 /*Load the base bootstrap css*/
     @import url(http://css.nlx.org/framework/css/bootstrap.min.css);
@@ -10,18 +11,17 @@ Copyright 2011-12 DirectEmployers Foundation
 /*Load the jquery themeroller css*/
     @import url(http://css.nlx.org/framework/css/jqsmoothness.css);
 
-/*Style overrides below here.*/
-/*Document*/
+
+/*Document level classes*/
 html,body{
 	height: 100%;
 	}
 body{
-    font-family: arial, helvetica, sans-serif; 
+	font-family: Arial, Helvetica, sans-serif;
 }
 header{
     background-image: -webkit-linear-gradient(bottom, #999,#fff);
-    background-image: -moz-linear-gradient(bottom, #999,#fff);
-    
+    background-image: -moz-linear-gradient(bottom, #999,#fff);    
 }
 footer{
     background-image: -webkit-linear-gradient(top, #999,#000);
@@ -36,7 +36,7 @@ footer{
     width: 960px;
     display: block;
 }
-/*H1-H6*/
+/*Header Level Elements*/
 h1{
     color: #900;
 }
@@ -48,6 +48,10 @@ h1{
 .rowTitle{
     font-weight: bold;
 }
+/*Lists*/
+li{
+	color: #000;
+	}
 /*Blockquote*/
 .section blockquote{
     margin: 10px;
@@ -168,4 +172,8 @@ h1{
 .span-three-fifths{
 	width: 556px;
 	}
-	
+/*Text focusing classes*/	
+em.underline{
+	font-style: normal;
+	text-decoration:underline;
+	}	
