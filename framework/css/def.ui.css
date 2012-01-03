@@ -11,7 +11,10 @@ Updated Dec 20 2011
 /*Load the jquery themeroller css*/
     @import url(http://css.nlx.org/framework/css/jqsmoothness.css);
 
-
+/*Load Mobile Override*/
+	@media screen and (min-width: 320px){
+		
+		}
 /*Document level classes*/
 html,body{
 	height: 100%;
@@ -40,6 +43,7 @@ footer{
 h1{
     color: #900;
 }
+
 h2{
     line-height: 1;
 	font-size: 1.7em;
@@ -127,6 +131,9 @@ dd{
 .section p,.section dl,.section ol,.section ul{
     padding: 10px;
 }
+.section .topbar p,.section .topbar ul{
+	padding: 0px;
+	}
 p.columns{
 	-moz-column-gap: 2em;
 	-webkit-column-gap: 2em;

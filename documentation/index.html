@@ -2,9 +2,96 @@
 <html>
 <head>
 	<title>DEF.UI</title>
+    <meta name="viewport" content="width=device-width"/>
     <link href="http://css.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css">
     <script src="http://js.nlx.org/framework/js/def.ui.core.js"></script>
     <link href="http://png.nlx.org/def-static/images/favicon.ico" rel="shortcut icon">
+    <style>
+	@media screen and (max-width: 800px){
+		.wrapper{
+			width: 100%;
+			}
+		.row{
+			margin: 0px;
+			}
+		.span6,.span7,.span8,
+		.span9,.span10,.span11.span12,
+		.span13,.span14,.span15,.span16,
+		.span-one-fifth,
+		.span-two-fifths,
+		.span-three-fifths{
+			width: auto;
+			margin: 0 10px;
+			}
+		.topbar h3 a, .topbar .brand{
+			margin-left: 5px;
+			}
+		h1{
+			font-size: 2em;
+			}
+		h1.mark span{
+			display: block;
+			}
+		p.col3,p.col2{
+			-moz-column-count:1;
+			-webkit-column-count: 1;
+			column-count: 1;
+			}
+		.h2block{
+			padding-left: 6px;
+			padding-right: 6px;
+			}
+		
+		#bottomLinks .foundationName{
+			display: none;
+			}
+		#bottomLinks a{
+			display: block;
+			width: 100%;
+			margin: 5px 0px !important;
+			border: 1px solid #fff;
+			padding: 10px 0px;
+			text-align: center;
+			font-size: 1.5em;
+			background: #251C02;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius: 6px;
+			}
+		/*temp for mobile testing*/
+		.section .topbar,.section .topbar-wrapper{
+			position: static;
+			height: auto;
+			}
+		.section .topbar p,.section .topbar ul{
+			padding: 0px;
+			}
+		.section .topbar ul li{
+			display: block;
+			float: none;
+			}
+		.section .topbar div > ul, .section .nav{
+			float: none;
+			}
+		/*end temp*/
+		.section .topbar-wrapper .topbar .topbar-inner{
+			background: none;
+			height: auto;
+			margin: 0px;
+			padding: 0px;
+			}
+		.section .topbar a{
+			display: block;
+			width: 100%;
+			font-size: 2em;
+			background: #333;
+			margin: 5px 0px !important;
+			border: 1px solid #fff;
+			padding: 10px 10px;
+			text-align: center;
+			}
+		}
+	</style>
 </head>
 <body>
 <div class="topbar">
@@ -18,7 +105,7 @@
 	<div class="wrapper">
     <div class="row">
     	<div class="span16">
-        	<h1>DirectEmployersFoundation UI Framework</h1>
+        	<h1 class="mark">DirectEmployers<span>Foundation</span> UI Framework</h1>
             <p class="columns col2">
             <b>The DirectEmployers UI Framework (DEF.UI)</b> is a  CSS and JavaScript framework system for rapid prototyping. It is built
             on two industry standard frameworks - <a href="http://twitter.github.com/bootstrap">Bootstrap</a> and <a href="http://jquery.org">jQuery</a>.
@@ -26,6 +113,36 @@
             The framework is split into two main components: Logic Components and Presentation Components. The logic component is built on jQuery tools. This 
             includes jQuery Core, jQuery UI, jQuery Mobile, and jQuery DataTables. The presentation side is built on the bootstrap css and html markup.
             </p>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="span16">
+            <div class="topbar-wrapper">
+                <div class="topbar" data-dropdown="dropdown">
+                  <div class="topbar-inner">
+                    <div class="container">
+                      <ul id="menu-primary-navigation" class="menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://directemployersfoundation.org/about">About</a></li>
+                        <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://directemployersfoundation.org/contribute">Contribute</a></li>
+                        <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://directemployersfoundation.org/projects">Projects</a></li>
+                        <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="http://directemployersfoundation.org/contact">Contact</a></li>
+                        <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://directemployersfoundation.org/blog">Blog</a></li>
+                        </ul> 
+                      <div class="pull-right">
+                          <div class="inline-inputs">
+        <form action="http://directemployersfoundation.org/" method="get">
+            <fieldset>
+            <p>
+                <input type="text" name="s" id="search" value="">
+                <input class="btn secondary small" type="submit" alt="Search" value="Search">
+                </p>
+            </fieldset>
+        </form>
+    </div> <!-- /inline-inputs -->         
+                      </div>
+                    </div>
+                  </div><!-- /topbar-inner -->
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -56,11 +173,16 @@
             <h4>Modifications to Core jQuery</h4>
             <table>
             <tr>
-                <th>Module</th><th>Function</th><th>Modification</th>                    
+            	<th colspan="2">Autocomplete</th>
+            <tr>
+                <td>Module</td><td>jQueryUI</td>
             </tr><tr>
-                <td>jQueryUI</td><td>$.autocomplete</td>
+                <td>Function</td>
+                <td>$.autocomplete</td>
+            </tr><tr>            
+                <td>Modification</td>                    
                 <td>Added support for custom classes, ids and categories.
-                <h5>New parameters</h5>
+	                <h5>New parameters</h5>
 	                <ul>
                     	<li><b>acClassName</b><br/>
                         	String Value - class attribute to assign to the autocomplete &gt;ul&lt; object.
@@ -72,6 +194,7 @@
                         </li>
                     </ul>
                 </td>
+
             </tr>
             </table>
 
