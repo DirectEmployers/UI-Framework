@@ -7,14 +7,106 @@
     <script src="http://js.nlx.org/framework/js/def.ui.core.js"></script>
     <link href="http://png.nlx.org/def-static/images/favicon.ico" rel="shortcut icon">
     <style>
-	
-	@media screen and (max-width: 800px){
+	/*Tablet friendly under 1024*/		
+	@media screen and (max-width: 1024px){
+		body{		
+			min-width: 960px;
+			}
 		.wrapper{
 			width: 100%;
 			}
 		.row{
-			margin: 0px;
+			margin-left: -10px;
 			}
+		#bottomLinks .foundationName{
+			display: none;
+			}
+		#bottomLinks a{
+			display: block;
+			float: left;
+			margin: 5px 5px !important;
+			border: 1px solid #fff;
+			padding: 10px 10px;
+			text-align: center;
+			font-size: 1.5em;
+			background: #251C02;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius: 6px;
+			}
+		.topbar-wrapper{
+			height: auto;
+			width: 100%;
+			}
+		.topbar,.topbar-wrapper .topbar{
+			position: static;
+			height: auto;
+			}
+		body > .topbar{
+			margin-top: -30px;
+			}
+			
+		.topbar h3 a, .topbar .brand{
+			margin-left: 5px;
+			}
+		.topbar .container {
+			width: auto;
+			}
+		.topbar h3{
+			position: static;
+			}
+		
+		.topbar .topbar-inner{
+			height: auto;
+			margin: 0px;
+			padding: 0px;
+			}	
+			
+			
+			
+		body > .topbar li a,
+		.section .topbar-wrapper .topbar div > ul li a{
+			display: block;
+			font-size: 1.5em;
+			background: #333;
+			margin: 5px 5px !important;
+			border: 1px solid #fff;
+			padding: 10px 10px;
+			text-align: center;
+			}
+		.section .topbar-wrapper .topbar .topbar-inner{
+			background: #333;
+			height: auto;
+			margin: 0px;	
+			padding: 0px;
+			}
+		.section p a{
+			background: #0069D6;
+			color: white;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			padding: 0 6px;
+			}
+		body > .topbar ul.menu + .pull-right{
+			float: none;
+			clear: both;
+			padding-left: 308px;
+			}
+		.topbar form #search{
+			font-size: 1.5em;
+			}
+		.topbar form btn{
+			}
+		}
+	/*Single column under 500*/
+	@media screen and (max-width: 500px){	
+		body{		
+			min-width: 0px;
+			}	
+		.row{
+			margin-left: 0px;
+			}			
 		.span6,.span7,.span8,
 		.span9,.span10,.span11.span12,
 		.span13,.span14,.span15,.span16,
@@ -26,9 +118,7 @@
 			display: block;
 			float: none;
 			}
-		.topbar h3 a, .topbar .brand{
-			margin-left: 5px;
-			}
+		
 		h1{
 			font-size: 2em;
 			}
@@ -45,43 +135,12 @@
 			padding-right: 6px;
 			}
 		
-		#bottomLinks .foundationName{
-			display: none;
-			}
-		#bottomLinks a{
-			display: block;
-			width: 100%;
-			margin: 5px 0px !important;
-			border: 1px solid #fff;
-			padding: 10px 0px;
-			text-align: center;
-			font-size: 1.5em;
-			background: #251C02;
-			-moz-border-radius:6px;
-			-webkit-border-radius:6px;
-			border-radius: 6px;
-			}
-		.topbar .container {
-			width: auto;
-			}
-		.topbar h3{
-			position: static;
-			}
 		.topbar h3 a, .topbar .brand{
 			float: none;
 			border-width: 0px;
 			}
-		.topbar-wrapper{
-			height: auto;
-			width: 100%;
-			}
-		.topbar,.topbar-wrapper .topbar{
-			position: static;
-			height: auto;
-			}
-		body > .topbar{
-			margin-top: -30px;
-			}
+		
+		
 		.topbar p,.topbar ul{
 			padding: 0px;
 			}
@@ -93,11 +152,7 @@
 			float: none;			
 			margin: 0px;
 			}
-		.topbar .topbar-inner{
-			height: auto;
-			margin: 0px;
-			padding: 0px;
-			}
+		
 		body > .topbar li a,
 		.section .topbar-wrapper .topbar div > ul li a{
 			display: block;
@@ -116,19 +171,12 @@
 		.topbar form{
 			display: none;
 			}
-		.section .topbar-wrapper .topbar .topbar-inner{
-			background: #333;
-			height: auto;
-			margin: 0px;	
-			padding: 0px;
-			}
-		.section p a{
-			background: #0069D6;
-			color: white;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
-			padding: 0 6px;
+		#bottomLinks a{
+			display: block;
+			float: none;
+			margin: 5px 0px !important;
+			border: 1px solid #fff;
+			padding: 10px 0px;
 			}
 		}
 	</style>
