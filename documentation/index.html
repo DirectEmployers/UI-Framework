@@ -55,7 +55,9 @@
 		.topbar h3{
 			position: static;
 			}
-		
+		.topbar h3 a{
+			margin-bottom: 45px;
+			}
 		.topbar .topbar-inner{
 			height: auto;
 			margin: 0px;
@@ -89,14 +91,32 @@
 			padding: 0 6px;
 			}
 		body > .topbar ul.menu + .pull-right{
-			float: none;
-			clear: both;
-			padding-left: 308px;
+			float: left;
+			padding-left: 23px;
 			}
 		.topbar form #search{
 			font-size: 1.5em;
+			height: 30px;
+			margin: 10px 0;
 			}
-		.topbar form btn{
+		body > .topbar form #search{
+			width: 100px;		
+			}
+		body > .topbar form #search:focus{
+			width: 500px;			
+			}
+		body > .topbar .inline-inputs form #search + input.small{
+			display: none;
+			}
+		.topbar-wrapper form #search:focus{
+			width: 750px;
+			}
+		.topbar-wrapper .inline-inputs input.small,
+		body > .topbar .inline-inputs form #search:focus + input.small{
+			font-size: 1.5em;
+			width: 120px;
+			height: 40px;
+			display: inline-block;
 			}
 		}
 	/*Single column under 500*/
