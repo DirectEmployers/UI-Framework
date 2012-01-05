@@ -1,0 +1,74 @@
+body{		
+	min-width: 0px;
+	}	
+.row{
+	margin-left: 0px;
+	}			
+.span6,.span7,.span8,
+.span9,.span10,.span11.span12,
+.span13,.span14,.span15,.span16,
+.span-one-fifth,
+.span-two-fifths,
+.span-three-fifths{
+	width: auto;
+	margin: 0 10px;
+	display: block;
+	float: none;
+	}		
+h1{
+	font-size: 2em;
+	}
+h1.mark span{
+	display: block;
+	}
+p.col3,p.col2{
+	-moz-column-count:1;
+	-webkit-column-count: 1;
+	column-count: 1;
+	}
+.h2block{
+	padding-left: 6px;
+	padding-right: 6px;
+	}
+
+.topbar h3 a, .topbar .brand{
+	float: none;
+	border-width: 0px;
+	}		
+
+.topbar p,.topbar ul{
+	padding: 0px;
+	}
+.topbar div > ul > li, .nav > li{
+	display: block;
+	float: none;
+	}
+.topbar div > ul, .nav{
+	float: none;			
+	margin: 0px;
+	}		
+body > .topbar li a,
+.section .topbar-wrapper .topbar div > ul li a{
+	display: block;
+	float: left;
+	width: 40%;			
+	font-size: 1.5em;
+	background: #333;
+	margin: 5px 5px !important;
+	border: 1px solid #fff;
+	padding: 10px 10px;
+	text-align: center;
+	}
+.section .topbar-wrapper .topbar div > ul li a{
+	width: 39%;
+	}
+.topbar form{
+	display: none;
+	}
+#bottomLinks a{
+	display: block;
+	float: none;
+	margin: 5px 0px !important;
+	border: 1px solid #fff;
+	padding: 10px 0px;
+	}
