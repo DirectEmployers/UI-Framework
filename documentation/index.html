@@ -55,9 +55,6 @@
 		.topbar h3{
 			position: static;
 			}
-		.topbar h3 a{
-			margin-bottom: 45px;
-			}
 		.topbar .topbar-inner{
 			height: auto;
 			margin: 0px;
@@ -90,26 +87,55 @@
 			border-radius: 4px;
 			padding: 0 6px;
 			}
-		body > .topbar ul.menu + .pull-right{
+		.topbar ul.menu + .pull-right{
 			float: left;
+			}
+		.topbar ul.menu + .pull-right #search{
+			width: 800px;
+			margin: 10px 0px 5px 10px;
+			font-size: 1.5em;
+			height: 32px;
+			}
+		.topbar-wrapper ul.menu + .pull-right #search{			
+			margin: 0px 0px 5px 22px;
+			width: 736px;
+			}
+		.topbar .inline-inputs form #search + input.small{
+			font-size: 1.5em;
+			width: 120px;
+			height: 40px;
+			display: inline-block;
+			}
+		/*.topbar ul.menu + .pull-right{
+			float: left;
+			}
+		body > .topbar ul.menu + .pull-right{
 			padding-left: 23px;
+			}
+		.topbar form {
+			position: static;
 			}
 		.topbar form #search{
 			font-size: 1.5em;
-			height: 30px;
-			margin: 10px 0;
+			height: 32px;
+			margin: 10px 0 0 0;
 			}
 		body > .topbar form #search{
-			width: 100px;		
+			width: 68px;		
 			}
 		body > .topbar form #search:focus{
-			width: 500px;			
+			width: 862px;
+			position: absolute;
+			left: 10px;			
 			}
 		body > .topbar .inline-inputs form #search + input.small{
-			display: none;
+			width: 40px;
+			height: 40px;			
 			}
 		.topbar-wrapper form #search:focus{
 			width: 750px;
+			position: absolute;
+			left: 20px;
 			}
 		.topbar-wrapper .inline-inputs input.small,
 		body > .topbar .inline-inputs form #search:focus + input.small{
@@ -117,7 +143,16 @@
 			width: 120px;
 			height: 40px;
 			display: inline-block;
+			position: absolute;
+			left: 800px;
+			top: 5px;
 			}
+		body > .topbar .inline-inputs form #search:focus + input.small{
+			top: 7px;
+			left: 902px;	
+			}
+		.topbar-wrapper #search:focus + input.small{
+			}*/
 		}
 	/*Single column under 500*/
 	@media screen and (max-width: 500px){	
@@ -200,6 +235,75 @@
 			}
 		}
 	</style>
+    <script>
+	browser=getBrowser();
+	//alert(browser);
+	//getBroswer class object. Creates an object with properties of the browser.
+    function getBrowser(){
+        //init variables
+        var uAgent=navigator.userAgent.toLowerCase();
+        var uAgentLen = uAgent.length;
+        var browserName="";
+        var browserVersion="";
+        var browserMajorVersion="";
+        var browserPlatform="";
+        var browserWidth=0;
+        var browserHeight=0;
+        if(uAgent.indexOf('msie')>0){//IE specific assignments
+            browserName="ie";
+            version=uAgent.substring(uAgent.indexOf('msie ')+5,uAgentLen);
+            version=version.substring(0,version.indexOf(';'));
+            browserVersion=version;
+            browserWidth=document.documentElement.clientWidth;
+            browserHeight=document.documentElement.clientHeight;
+        }else if(uAgent.indexOf('chrome')>0){//chrome specific assignments
+            browserName="chrome";
+            version=uAgent.substring(uAgent.indexOf('chrome/')+7,uAgentLen);
+            version=version.substring(0,version.indexOf(' '));
+            browserVersion=version;
+            browserWidth=window.innerWidth;
+            browserHeight=window.innerHeight;
+        }else if(uAgent.indexOf('applewebkit')>0){//Safari specific assignments
+            browserName="safari";
+            version=uAgent.substring(uAgent.indexOf('version/')+8,uAgentLen);
+            version=version.substring(0,version.indexOf(' '));
+            browserVersion=version;
+            browserWidth=window.innerWidth;
+            browserHeight=window.innerHeight;
+        }else if(uAgent.indexOf('firefox')>0){//FF specific assignments
+            browserName="ff";
+            version=uAgent.substring(uAgent.indexOf('firefox/')+8,uAgentLen);
+            version=version.substring(0,version.indexOf(' '));
+            browserVersion=version;
+            browserWidth=window.innerWidth;
+            browserHeight=window.innerHeight;
+        }
+        //set platform - default to windows unelss there is a match otherwise
+        if(uAgent.indexOf("os x")>0){
+            browserPlatform="mac";
+        }else if(uAgent.indexOf("linux")>0){
+            browserPlatform="linux";
+        }else if(uAgent.indexOf("iphone")>0){
+            browserPlatform="iphone";
+        }else if(uAgent.indexOf("android")>0){
+            browserPlatform="android";
+        }else{
+            browserPlatform="windows";
+        }
+        browserMajorVersion=version.substring(0,version.indexOf("."));
+        //create the object
+        var browser={};
+        //create object properties
+        browser.name=browserName;
+        browser.version=browserVersion;
+        browser.majorVersion=browserMajorVersion;
+        browser.width=browserWidth;
+        browser.height=browserHeight;
+        browser.platform=browserPlatform;
+        //return the object to the calling location
+        return browser;
+    }
+	</script>
 </head>
 <body>
 <!--<div class="topbar">
