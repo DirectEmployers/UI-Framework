@@ -5,17 +5,48 @@
 </head>
 <body>
     {% include "includes/topbar.html" %}
-    {% block subpage %}    
+    {% block subpage %}
     <section><div class="section subpage">
+	{% block header %}
         <div class="wrapper">
 	    <div class="row">
     		<div class="span16">
-		    {% block content %}
-		    <h1>The content</h1>
-		    {% endblock content %}
-		</div>
+		{% block header-content %}
+		    <h1 class="mark">DirectEmployers<span>Foundation</span> UI Framework</h1>
+		    <p>
+		    Introduction text is displayed here, if needed.
+		    </p>
+		{% endblock header-content %}
+		</div>        
 	    </div>
-	<div>
+	</div>
+	{% endblock header %}
+	<div class="row">
+	    {# to change layouts, override content-area in your template #}
+	    {% block content-area %}
+	     <div class="span-three-fifths">
+	     {% block content %}
+        	<h2 class="h2block">Three Fifths Column Content</h2>
+		<p>
+		This is where your content goes.
+		</p>
+	    {% endblock content %}
+	    </div>
+	    {% endblock content-area %}
+	    {% block focusbox %}
+	    <div class="span-two-fifths">
+		<div id="focusBox">
+		    {% block focusbox-content %}
+    		    <div class="h2block takeover">
+		        <h3>Focus Box Content</h3>
+	    	        <p>Goes here.</p>
+		    </div>
+		    {% endblock focusbox-content %}    
+	        </div>
+    	    </div>
+	    {% endblock focusbox %}	
+	</div>
+	{% endblock content-area %}
     </div></section>
     {% endblock subpage %}
     {% block footer %}    
