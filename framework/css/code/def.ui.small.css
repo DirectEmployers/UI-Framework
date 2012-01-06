@@ -48,7 +48,7 @@ p.col3,p.col2{
 	margin: 0px;
 	}		
 body > .topbar li a,
-.topbar-wrapper .topbar div > ul li a{
+.section .topbar-wrapper .topbar div > ul li a{
 	display: block;
 	float: left;
 	width: 40%;			
@@ -59,7 +59,7 @@ body > .topbar li a,
 	padding: 10px 10px;
 	text-align: center;
 	}
-.topbar-wrapper .topbar div > ul li a{
+.section .topbar-wrapper .topbar div > ul li a{
 	width: 39%;
 	}
 .topbar form{
