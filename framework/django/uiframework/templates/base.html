@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% comment %}
+base.html -- implements DEF Framework page.
+
+Where practical, the HTML structure is separated from content... so to override
+content only, override whatever-content in your template. To override the 
+structure of the page (e.g. single column for content) you would override 
+whatever.
+{% endcomment %}
+<!doctype html>
+<html>
+<head>
+    {% include "includes/meta.html" %}
+</head>
+<body>
+    {% include "includes/topbar.html" %}
+    {% block subpage %}
+    <section><div class="section subpage">
+	{% block header %}
+        <div class="wrapper">
+	    <div class="row">
+    		<div class="span16">
+		{% block header-content %}
+		    <h1 class="mark">DirectEmployers<span>Foundation</span> UI Framework</h1>
+		    <p>
+		    Introduction text is displayed here, if needed.
+		    </p>
+		{% endblock header-content %}
+		</div>        
+	    </div>
+	</div>
+	{% endblock header %}
+	<div class="row">
+	    {# to change layouts, override content-area in your template #}
+	    {% block content-area %}
+	     <div class="span-three-fifths">
+	     {% block content %}
+        	<h2 class="h2block">Three Fifths Column Content</h2>
+		<p>
+		This is where your content goes.
+		</p>
+	    {% endblock content %}
+	    </div>
+	    {% endblock content-area %}
+	    {% block focusbox %}
+	    <div class="span-two-fifths">
+		<div id="focusBox">
+		    {% block focusbox-content %}
+    		    <div class="h2block takeover">
+		        <h3>Focus Box Content</h3>
+	    	        <p>Goes here.</p>
+		    </div>
+		    {% endblock focusbox-content %}    
+	        </div>
+    	    </div>
+	    {% endblock focusbox %}	
+	</div>
+	{% endblock content-area %}
+    </div></section>
+    {% endblock subpage %}
+    {% block footer %}    
+    <footer><div class="footer">
+	<div id="bottomTabs">
+	    {% block bottomtabs %}
+	    <div class="wrapper">
+		<div class="row">
+		</div>
+	    </div>
+	    {% endblock bottomtabs %}
+	</div>
+    {% endblock footer %}
+    {% include "includes/analytics.html" %}
+</body>
+</html>
