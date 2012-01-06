@@ -7,7 +7,7 @@ serving static content out of the database and being able to edit pages in
 django-admin)
 {% endcomment %}
 
-<title>{% block title-text %}{{ flatpage.title }} {% endblock title-text %}</title>
+<title>{% block title %}{{ flatpage.title }}{% endblock title %}</title>
 
 {% block page-header-text %}
     <h1>{{ flatpage.title }}</h1>
