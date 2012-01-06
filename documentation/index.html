@@ -2,23 +2,49 @@
 <html>
 <head>
 	<title>DEF.UI</title>
+    <meta name="viewport" content="width=device-width"/>
     <link href="http://css.nlx.org/framework/css/def.ui.css" rel="stylesheet" type="text/css">
     <script src="http://js.nlx.org/framework/js/def.ui.core.js"></script>
-    <link href="http://png.nlx.org/def-static/images/favicon.ico" rel="shortcut icon">
+    <link href="http://png.nlx.org/def-static/images/favicon.ico" rel="shortcut icon">    
 </head>
 <body>
-<div class="topbar">
+<!--<div class="topbar">
 	<div class="topbar-inner">
         <div class="container">
           <h3><a href="/">DirectEmployers Foundation</a></h3>
         </div>
     </div>
+</div>-->
+<div class="topbar" data-dropdown="dropdown">
+  <div class="topbar-inner">
+    <div class="container">
+        <h3><a href="/">DirectEmployers Foundation</a></h3> 
+        <ul id="menu-primary-navigation" class="menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://directemployersfoundation.org/about">About</a></li>
+            <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://directemployersfoundation.org/contribute">Contribute</a></li>
+            <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item menu-item-31"><a href="http://directemployersfoundation.org/projects">Projects</a></li>
+            <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="http://directemployersfoundation.org/contact">Contact</a></li>
+            <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://directemployersfoundation.org/blog">Blog</a></li>
+        </ul> 
+        <div class="pull-right">
+	        <div class="inline-inputs">
+            <form action="http://directemployersfoundation.org/" method="get">
+                <fieldset>
+                <p>
+                    <input type="text" name="s" id="search" value="">
+                    <input class="btn secondary small" type="submit" alt="Search" value="Search">
+                    </p>
+                </fieldset>
+            </form>
+			</div> <!-- /inline-inputs -->         
+        </div>
+    </div>
+  </div><!-- /topbar-inner -->
 </div>
 <section><div class="section subpage">
 	<div class="wrapper">
     <div class="row">
     	<div class="span16">
-        	<h1>DirectEmployersFoundation UI Framework</h1>
+        	<h1 class="mark">DirectEmployers<span>Foundation</span> UI Framework</h1>
             <p class="columns col2">
             <b>The DirectEmployers UI Framework (DEF.UI)</b> is a  CSS and JavaScript framework system for rapid prototyping. It is built
             on two industry standard frameworks - <a href="http://twitter.github.com/bootstrap">Bootstrap</a> and <a href="http://jquery.org">jQuery</a>.
@@ -26,6 +52,36 @@
             The framework is split into two main components: Logic Components and Presentation Components. The logic component is built on jQuery tools. This 
             includes jQuery Core, jQuery UI, jQuery Mobile, and jQuery DataTables. The presentation side is built on the bootstrap css and html markup.
             </p>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="span16">
+            <div class="topbar-wrapper">
+                <div class="topbar" data-dropdown="dropdown">
+                  <div class="topbar-inner">
+                    <div class="container">
+                      <ul id="menu-primary-navigation" class="menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="http://directemployersfoundation.org/about">About</a></li>
+                        <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://directemployersfoundation.org/contribute">Contribute</a></li>
+                        <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://directemployersfoundation.org/projects">Projects</a></li>
+                        <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="http://directemployersfoundation.org/contact">Contact</a></li>
+                        <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://directemployersfoundation.org/blog">Blog</a></li>
+                        </ul> 
+                      <div class="pull-right">
+                          <div class="inline-inputs">
+        <form action="http://directemployersfoundation.org/" method="get">
+            <fieldset>
+            <p>
+                <input type="text" name="s" id="search" value="">
+                <input class="btn secondary small" type="submit" alt="Search" value="Search">
+                </p>
+            </fieldset>
+        </form>
+    </div> <!-- /inline-inputs -->         
+                      </div>
+                    </div>
+                  </div><!-- /topbar-inner -->
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -56,11 +112,16 @@
             <h4>Modifications to Core jQuery</h4>
             <table>
             <tr>
-                <th>Module</th><th>Function</th><th>Modification</th>                    
+            	<th colspan="2">Autocomplete</th>
+            <tr>
+                <td>Module</td><td>jQueryUI</td>
             </tr><tr>
-                <td>jQueryUI</td><td>$.autocomplete</td>
+                <td>Function</td>
+                <td>$.autocomplete</td>
+            </tr><tr>            
+                <td>Modification</td>                    
                 <td>Added support for custom classes, ids and categories.
-                <h5>New parameters</h5>
+	                <h5>New parameters</h5>
 	                <ul>
                     	<li><b>acClassName</b><br/>
                         	String Value - class attribute to assign to the autocomplete &gt;ul&lt; object.
@@ -72,6 +133,7 @@
                         </li>
                     </ul>
                 </td>
+
             </tr>
             </table>
 
