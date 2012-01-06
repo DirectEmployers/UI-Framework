@@ -87,3 +87,6 @@ body > .topbar li a,
 	border: 1px solid #fff;
 	padding: 10px 0px;
 	}
+.span-two-fifths input[type=text]{
+	width: 100%;
+	}
