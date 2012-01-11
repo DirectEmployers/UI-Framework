@@ -202,12 +202,8 @@ body.home{
 	margin: 0px;	
 	}	
 .topbar h3 a{
-	background-image: url(http://css.nlx.org/def-static/images/DEFlogo-horz.png);
-	background-repeat: no-repeat;
-	text-indent: -9000px;
-	width: 280px;
-	height: 30px;
-	padding: 0px;
+	height: 26px;
+	padding: 4px 0 0 0px;
 	}
 
 
