@@ -145,11 +145,6 @@ p.col2{
 	color:#fff;
 	}
 #bottomTabs .wrapper .row{	
-	padding-bottom: 19px;
-	height: 116px;
-	background-image: url(http://css.nlx.org/def-static/images/monologo.png);
-	background-position: 35px 6px;
-	background-repeat: no-repeat;
 	}
 #bottomTabs h3{
 	padding-top: 10px;
@@ -207,12 +202,8 @@ body.home{
 	margin: 0px;	
 	}	
 .topbar h3 a{
-	background-image: url(http://css.nlx.org/def-static/images/DEFlogo-horz.png);
-	background-repeat: no-repeat;
-	text-indent: -9000px;
-	width: 280px;
-	height: 30px;
-	padding: 0px;
+	height: 26px;
+	padding: 4px 0 0 0px;
 	}
 
 
