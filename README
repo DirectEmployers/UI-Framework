@@ -1,10 +1,22 @@
 Global UI Framework
-(C) 2011 DirectEmployers Foundation
+(C) 2011-2012 DirectEmployers Foundation
 
-Currently in alpha development
+Documentation is still in its infancy. Please contact Jason Sole with any questions: jason -at- directemplpoyersfoundation.org.
 
 /framework
-contains the actual files for inclusion in the UI
+contains the actual files for inclusion in the UI. This broken into 4 main areas:
+
+css
+The css files need to make the foundation work. This includes the base bootstrap files (which are included instead of hotlinked in order to control unintended effects due to changes in the bootstrap project).
+
+js
+The base javascript files. This is 95% jQuery right now, with a few custom functions. jQuery is included instead of hot liked for the same reason as Bootstrap.
+
+images
+Any images required by the css and javascript to style elements.
+
+django
+Template and settings helpful to using the framework in a django project.
 
 /documentation
 Contains all documentation and examples
