@@ -7,15 +7,12 @@ This UI Framework uses the following libraries:
  - swfObject
  - BootstrapJS
 *****************************************************************************-*/
-var loader="def.ui.core.js";
+var loader="def.ui.bootstrap.js";
 var jsSrc = "http://js.nlx.org/framework/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
-	"code/jquery-1.7.1.min.js",
-    "code/jquery-ui.min.js",
-    "code/swfobject.js",
-    "code/foundation.js"
+    "code/bootstrap-tooltips.js"
 ];
 
 for(var i=0;i<fileList.length;i++){
