@@ -19,7 +19,11 @@ var fileList = [
     "code/bootstrap-popover.js",
     "code/bootstrap-scrollspy.js",
     "code/bootstrap-tabs.js",
-    "code/bootstrap-twipsy.js"
+    "code/bootstrap-twipsy.js",
+    "code/bootstrap-tooltips.js",
+    "code/bootstrap-typeahead.js",
+    "code/bootstrap-collapse.js",
+    "code/bootstrap-carousel.js"
 ];
 
 for(var i=0;i<fileList.length;i++){

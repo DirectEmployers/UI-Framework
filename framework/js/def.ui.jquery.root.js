@@ -12,7 +12,7 @@ var jsSrc = "http://js.nlx.org/framework/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
-    "code/jquery-1.6.4.min.js"
+    "code/jquery-1.7.1.min.js"
 ];
 
 for(var i=0;i<fileList.length;i++){
