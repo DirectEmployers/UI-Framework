@@ -46,6 +46,12 @@ article p a{
 	display: inline-block;
 	margin: 2px 0;
 	}
+.section p a.btn,
+.leaderBoard p a.btn,
+article p a.btn{
+	padding: 6px 10px 7px 10px;
+	border-width: 1px;
+	}
 .topbar h3 a, .topbar .brand{
 	float: none;
 	border-width: 0px;
