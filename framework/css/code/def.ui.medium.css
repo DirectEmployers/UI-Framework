@@ -2,7 +2,8 @@ body{
 	min-width: 960px;
 	}
 .wrapper{
-	width: 100%;
+	width: 98%;
+	margin: 0 auto;
 	}
 .row{
 	margin-left: -10px;
@@ -87,7 +88,7 @@ body > .topbar li a,
 	float: left;
 	}
 .topbar ul.menu + .pull-right #search{
-	width: 800px;
+	width: 797px;
 	margin: 10px 0px 5px 10px;
 	font-size: 1.5em;
 	height: 32px;
@@ -101,4 +102,15 @@ body > .topbar li a,
 	width: 120px;
 	height: 40px;
 	display: inline-block;
+	margin: 10px 0px 5px 0px;
+	}
+#bottomLinks .subpageLinks a {
+	margin-left: 0px;
+	}
+#footerSubLinks{
+	width: auto;
+	}
+#footerSubLinks .pull-right{
+	float: none;
+	margin: 0 auto;
 	}
