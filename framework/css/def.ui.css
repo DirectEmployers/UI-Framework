@@ -3,7 +3,7 @@
 This system is built on Bootstrap, by twitter.
 
 Copyright 2011-12 DirectEmployers Foundation
-Updated Feb 3 2012
+Updated Feb 9 2012
 *******************************************************************************/
 /*Load the base bootstrap css*/
     @import url(http://css.nlx.org/framework/css/code/bootstrap.min.css);/*2.0.0*/	
@@ -13,14 +13,10 @@ Updated Feb 3 2012
     @import url(http://css.nlx.org/framework/css/code/jqsmoothness.css);
 
 /*Document level classes*/
-@import url(http://css.nlx.org/framework/css/code/def.ui.standard.css);
+	@import url(http://css.nlx.org/framework/css/code/def.ui.standard.css);
 
 /*Tablet friendly under 1024*/		
-
 	@import url(http://css.nlx.org/framework/css/code/def.ui.medium.css) screen and (max-width: 1024px);
 
-
 /*Single column under 500*/
-
-
 	@import url(http://css.nlx.org/framework/css/code/def.ui.small.css) screen and (max-width: 500px);
