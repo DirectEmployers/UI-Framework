@@ -8,7 +8,10 @@ Updated Feb 9 2012
 /*Load the base bootstrap css*/
     @import url(http://css.nlx.org/framework/css/code/bootstrap.min.css);/*2.0.0*/	
 	@import url(http://css.nlx.org/framework/css/code/def.ui.bootstrap.1.4.preservation.min.css);/*Load 1.4 retrofit*/
-	
+
+/*Load the latest dataTables css bootstrap fix*/
+    @import url(http://css.nlx.org/framework/css/code/def.ui.datatables.bootstrap-fix.css);
+		
 /*Load the jquery themeroller css*/
     @import url(http://css.nlx.org/framework/css/code/jqsmoothness.css);
 
