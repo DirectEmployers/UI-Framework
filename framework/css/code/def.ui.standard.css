@@ -247,6 +247,10 @@ body.home{
 	}
 	
 /*Grid Structure additions*/
+[class*="span"] {
+	float: left;
+	margin-left: 20px;
+	}
 .span-one-fifth{
 	width: 172px;
 	}
