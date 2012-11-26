@@ -1,10 +1,32 @@
+.topbar h3 a{
+    padding: 0px 20px;
+    }    
+.btn{
+    padding-top: 6px;
+    padding-bottom: 7px;
+    }
+.clear{
+    clear: both;
+    }
+.btn.pull-right{
+    /*margin-right: 10px;*/
+}
+.btn.pull-left{
+    margin-left: 10px;
+}
+#focusBox{
+    margin-bottom: 10px;
+}
+
+
 html,body{
 	height: 100%;
-	background-color: #453a24;
+	background: transparent;	
 	}
 body{
 	font-family: Arial, Helvetica, sans-serif;
 	min-width: 960px;
+    height: auto;
 }
 header,footer{
     background-color: transparent;
@@ -15,8 +37,6 @@ footer{
 	padding-top: 0px;
 	border-width: 0;
 	}
-.section{
-}
 .wrapper{
     margin: 0 auto;
     width: 960px;
@@ -26,7 +46,6 @@ footer{
 h1{
     color: #900;
 }
-
 h2{
     line-height: 1;
 	font-size: 1.7em;
@@ -171,18 +190,10 @@ p.col2{
 #bottomLinks .subpageLinks a{
 	margin-left: 30px;
 	}
+	
 /*Top bar dimensions*/
-body{
-	padding-top: 32px;
-	}
-body.home{
-	padding-top: 0px;
-	}
 .topbar{
 	min-width: 960px;
-	}	
-.topbar h3 a{
-	padding: 0px 20px;
 	}
 .topbar-inner{
 	background-color: #333;
@@ -190,14 +201,13 @@ body.home{
 	padding: 1px 10px 1px 0px;
 	}
 .topbar form{
-	margin: -3px 0 0 0px;
+	/*margin: -10px 0 0 0px;*/
 	}
 .topbar fieldset{
 	margin-bottom: 0px;
-	padding-top: 1px;
 	}
 .topbar-wrapper {
-	position: relative;
+	/*position: relative;*/
 	height: 40px;
 	margin: 5px 0 15px;
 	}	
@@ -205,56 +215,36 @@ body.home{
 	position: absolute;
 	margin: 0px;	
 	}	
+.topbar h3{
+    height: 1em;
+    margin: 0px;
+    line-height: 1em;
+}
 .topbar h3 a{
 	height: 26px;
 	padding: 4px 0 0 0px;
 	}
-
-
-.topbar-wrapper .topbar .topbar-inner{	
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius: 6px;
-	padding: 0 20px 0 40px;
-	}
-.topbar-wrapper .topbar .topbar-inner .container{
-	width: auto;
-	}
-.topbar div > ul, .topbar .nav{
-	margin-left: 20px;
-	}
-.topbar div > ul a, .nav a {
-	padding: 3px 10px 3px 10px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius: 4px;	
-	margin-top: 2px;
-	}
-.topbar div > ul a:hover, .nav a:hover {
-	background-color: #666;
-	cursor: pointer;
-	}
-.topbar li{
-	line-height: 1;
-	}
 .topbar .btn{
 	color: #000;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-top: 0px;
+	margin-bottom: 10px;
 	}
+	
 /*Button dimensions*/
-.btn{
-	padding-top: 6px;
-	padding-bottom: 7px;
+.btn{;
 	}
 .btn.primary{
-	color: #fff;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+	color: #333;
+	text-shadow: 0 -1px -11px rgba(255, 255, 255, 0.75);
 	}
 	
 /*Grid Structure additions*/
-[class*="span"] {
+/*[class*="span"] {
 	float: left;
 	margin-left: 20px;
-	}
+	}*/
 .span-one-fifth{
 	width: 172px;
 	}
@@ -266,7 +256,7 @@ body.home{
 	}
 .span-three-fifths{
 	width: 556px;
-	}
+	}	
 /*Text focusing classes*/	
 em.underline{
 	font-style: normal;
