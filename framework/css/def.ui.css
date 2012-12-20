@@ -2,11 +2,11 @@
 ********************************************************************************
 This system is built on Bootstrap, by twitter.
 
-Copyright 2011-12 DirectEmployers Foundation
-Updated Feb 9 2012
+Copyright 2011-13 DirectEmployers Foundation
+Updated Dec 20 2012
 *******************************************************************************/
-/*Load the base bootstrap css*/
-    @import url(http://css.nlx.org/framework/v2/css/code/bootstrap.221.min.css);/*2.2.1*/	
+/*Load the base bootstrap css (v2.2.1)*/
+    @import url(http://css.nlx.org/framework/v2/css/code/bootstrap.221.min.css);	
 
 /*Load the jquery themeroller css*/
     @import url(http://css.nlx.org/framework/v2/css/code/jqsmoothness.css);
