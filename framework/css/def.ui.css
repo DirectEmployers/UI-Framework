@@ -12,6 +12,7 @@ Updated Dec 20 2012
     @import url(http://css.nlx.org/framework/v2/css/code/jqsmoothness.css);
 
 /*Document level classes*/
+
 	.topbar h3 a{
 	    padding: 0px 20px;
         }    
@@ -82,6 +83,11 @@ Updated Dec 20 2012
     p+h2{
         margin-top: 20px;
         }
+    /*Forms*/
+    input, textarea{
+        width: auto;
+    }
+    
     /*Tables*/
     .rowTitle{
         font-weight: bold;
@@ -206,22 +212,20 @@ Updated Dec 20 2012
         }
         
     /*Top bar dimensions*/
-    .topbar{
+    /*.topbar{
         min-width: 960px;
-        }
+        }*/
     .topbar-inner{
         background-color: #333;
         height: 30px;
-        padding: 1px 10px 1px 0px;
         }
     .topbar form{
-        /*margin: -10px 0 0 0px;*/
+        margin-top: 2px;
         }
     .topbar fieldset{
         margin-bottom: 0px;
         }
     .topbar-wrapper {
-        /*position: relative;*/
         height: 40px;
         margin: 5px 0 15px;
         }	
@@ -239,7 +243,6 @@ Updated Dec 20 2012
         padding: 4px 0 0 0px;
         }
     .topbar .btn{
-        color: #000;
         padding-top: 3px;
         padding-bottom: 3px;
         margin-top: 0px;
@@ -247,12 +250,7 @@ Updated Dec 20 2012
         }
         
     /*Button dimensions*/
-    .btn{;
-        }
-    .btn.primary{
-        color: #333;
-        text-shadow: 0 -1px -11px rgba(255, 255, 255, 0.75);
-        }
+    
         
     /*Grid Structure additions*/
     /*[class*="span"] {
@@ -288,7 +286,7 @@ Updated Dec 20 2012
     }
 
 /*Tablet friendly under 1024*/		
-@media screen and (max-width:1024){
+@media screen and (max-width:1024px){
     body{		
         min-width: 960px;
         }
@@ -412,12 +410,12 @@ Updated Dec 20 2012
     body{		
         min-width: 0px;
         }	
+    
     .row{
         margin-left: 0px;
         }			
-    .span6,.span7,.span8,
+    .span4,.span5,.span6,.span7,
     .span9,.span10,.span11.span12,
-    .span13,.span14,.span15,.span16,
     .span-one-fifth,
     .span-two-fifths,
     .span-three-fifths{
