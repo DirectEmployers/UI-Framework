@@ -413,6 +413,7 @@ Updated Dec 20 2012
     .row{
         margin-left: 0px;
         }			
+    [class*="span"],
     .span4,.span5,.span6,.span7,
     .span9,.span10,.span11.span12,
     .span-one-fifth,
@@ -423,6 +424,11 @@ Updated Dec 20 2012
         display: block;
         float: none;
         }		
+    .offset1,.offset2,.offset3,.offset4,
+    .offset5,.offset6,.offset7,.offset8,
+    .offset9,.offset10,.offset11{
+        margin-left: 10px;
+    }
     h1{
         font-size: 2em;
         }
@@ -438,11 +444,12 @@ Updated Dec 20 2012
         padding-left: 6px;
         padding-right: 6px;
         }
+    .footer a,
     .section p a,
     .leaderBoard p a,
     article p a{
         background: rgba(255,255,255,.5);
-        border-color: #0069D6;
+        /*border-color: #0069D6;*/
         border-width: 2px;
         /*border-top-width: 0px;
         border-bottom-width: 0px;*/
@@ -453,6 +460,10 @@ Updated Dec 20 2012
         padding: 0px 6px;
         display: inline-block;
         margin: 2px 0;
+        }
+    .footer a{
+        display: block;
+        text-align: center;
         }
     .section p a.btn,
     .leaderBoard p a.btn,
