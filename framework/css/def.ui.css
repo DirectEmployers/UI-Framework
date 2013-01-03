@@ -2,24 +2,506 @@
 ********************************************************************************
 This system is built on Bootstrap, by twitter.
 
-Copyright 2011-12 DirectEmployers Foundation
-Updated Feb 9 2012
+Copyright 2011-13 DirectEmployers Foundation
+Updated Dec 20 2012
 *******************************************************************************/
-/*Load the base bootstrap css*/
-    @import url(http://css.nlx.org/framework/css/code/bootstrap.min.css);/*2.0.0*/	
-	@import url(http://css.nlx.org/framework/css/code/def.ui.bootstrap.1.4.preservation.min.css);/*Load 1.4 retrofit*/
+/*Load the base bootstrap css (v2.2.1)*/
+    @import url(http://css.nlx.org/framework/v2/css/code/bootstrap.221.min.css);	
 
-/*Load the latest dataTables css bootstrap fix*/
-    @import url(http://css.nlx.org/framework/css/code/def.ui.datatables.bootstrap-fix.css);
-		
 /*Load the jquery themeroller css*/
-    @import url(http://css.nlx.org/framework/css/code/jqsmoothness.css);
+    @import url(http://css.nlx.org/framework/v2/css/code/jqsmoothness.css);
 
 /*Document level classes*/
-	@import url(http://css.nlx.org/framework/css/code/def.ui.standard.css);
+
+	.topbar h3 a{
+	    padding: 0px 20px;
+        }    
+    .btn{
+        padding-top: 6px;
+        padding-bottom: 7px;
+        }
+    .clear{
+        clear: both;
+        }
+    .btn.pull-right{
+        /*margin-right: 10px;*/
+    }
+    .btn.pull-left{
+        margin-left: 10px;
+    }
+    #focusBox{
+        margin-bottom: 10px;
+    }
+    
+    
+    html,body{
+        height: 100%;
+        background: transparent;	
+        }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        min-width: 960px;
+        height: auto;
+    }
+    header,footer{
+        background-color: transparent;
+        color: #fff;
+        margin: 0px;
+    }
+    footer{
+        padding-top: 0px;
+        border-width: 0;
+        }
+    .wrapper{
+        margin: 0 auto;
+        width: 960px;
+        display: block;
+    }
+    /*Header Level Elements*/
+    h1{
+        color: #900;
+    }
+    h2{
+        line-height: 1;
+        font-size: 1.7em;
+        color: #333;
+    }
+    .h2block{
+        background-color: #fff;
+        padding: 5px 20px;
+        border-width: 1px;
+        border-color: #d4d0c5;
+        border-style: solid;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        }
+    .h2block h2{
+        margin-bottom: 10px;
+        }
+    p+h2{
+        margin-top: 20px;
+        }
+    /*Forms*/
+    input, textarea{
+        width: auto;
+    }
+    
+    /*Tables*/
+    .rowTitle{
+        font-weight: bold;
+    }
+    /*Lists*/
+    li{
+        color: #000;
+        }
+    dd{
+        margin-bottom: 10px;
+        }
+    /*Blockquote*/
+    .section blockquote{
+        margin: 10px;
+        padding: 5px;
+        border-width: 2px;   
+        border-style: solid;
+        border-color: #999;
+        border-color: rgba(127,127,127,.5);
+        background-color: rgba(255,255,255,.5);
+    }
+    
+    /*Contant Containers*/
+    .hero-unit h1{
+        background: #333;
+        color: #fff;
+        margin: -60px -60px 0 -60px;
+        -webkit-border-top-left-radius: 6px;
+        -webkit-border-top-right-radius: 6px;
+        -moz-border-topleft-radius: 6px;
+        -moz-border-topright-radius: 6px;
+    }
+    .roundedCorners6{
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    .roundedCorners6>h2{
+        -webkit-border-top-left-radius: 6px;
+        -webkit-border-top-right-radius: 6px;
+        -moz-border-radius-topleft: 6px;
+        -moz-border-radius-topright: 6px;
+        border-topleft-radius: 6px;
+        border-topright-radius: 6px;
+    }
+    #focusBox{
+        border-width: 8px;
+        border-color: #d2cdc1;
+        border-color: rgba(187, 181, 165, 0.6);
+        border-style: solid;	
+        background-color: #d7d2c3;
+        background-color: rgba(196,190,167,0.6);
+        background-clip: padding-box;
+        border-radius: 8px;
+        padding: 10px;
+        }	
+    .takeover{
+        margin: -10px;
+        }
+    .takeover + .takeover{
+        margin-top: 20px;
+        }
+    .section p,.section dl,.section ol,.section ul{
+        padding: 10px;
+    }
+    .section .topbar p,.section .topbar ul{
+        padding: 0px;
+        }
+    p.columns{
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 2em;
+        }
+    p.col3{
+        -moz-column-count:3;
+        -webkit-column-count: 3;
+        column-count: 3;
+        }
+    p.col2{
+        -moz-column-count:2;
+        -webkit-column-count: 2;
+        column-count: 2;
+        }
+    /*Footer elements*/
+    #bottomLinks a{
+        color: #fff;
+        }
+    #bottomTabs{
+        background: #251c02;
+        border-width: 0px;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color:#a3aeb1;
+        border-style: solid;
+        color:#fff;
+        }
+    #bottomTabs .wrapper .row{	
+        }
+    #bottomTabs h3{
+        padding-top: 10px;
+        color: #fff;
+        font-weight: normal;
+        line-height: 1em;
+        padding-bottom: 5px;
+        background-color: transparent;
+        }
+    #bottomTabs p{
+        line-height: 1.5em;	
+        }
+    #bottomLinks{
+        padding-top: 5px;
+        color: #fff;
+        }
+    #bottomLinks a{
+        color: #fff;
+        }
+    #bottomLinks #footerSubLinks a{
+        font-weight: normal;	
+        }
+    #bottomLinks .subpageLinks a{
+        margin-left: 30px;
+        }
+        
+    /*Top bar dimensions*/
+    /*.topbar{
+        min-width: 960px;
+        }*/
+    .topbar-inner{
+        background-color: #333;
+        height: 30px;
+        }
+    .topbar form{
+        margin-top: 2px;
+        }
+    .topbar fieldset{
+        margin-bottom: 0px;
+        }
+    .topbar-wrapper {
+        height: 40px;
+        margin: 5px 0 15px;
+        }	
+    .topbar-wrapper .topbar {
+        position: absolute;
+        margin: 0px;	
+        }	
+    .topbar h3{
+        height: 1em;
+        margin: 0px;
+        line-height: 1em;
+    }
+    .topbar h3 a{
+        height: 26px;
+        padding: 4px 0 0 0px;
+        }
+    .topbar .btn{
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        }
+        
+    /*Button dimensions*/
+    
+        
+    /*Grid Structure additions*/
+    /*[class*="span"] {
+        float: left;
+        margin-left: 20px;
+        }*/
+    .span-one-fifth{
+        width: 172px;
+        }
+    .span-two-fifths{
+        width: 364px;
+        }
+    .span-two-fifths input[type=text]{
+        width: 300px;
+        }
+    .span-three-fifths{
+        width: 556px;
+        }	
+    /*Text focusing classes*/	
+    em.underline{
+        font-style: normal;
+        text-decoration:underline;
+        }	
+        
+    /*Default Page level styles*/	
+    .leaderBoard,.subpage{
+        background-color: #f4f1ee;
+        background-position: top left;
+        background-repeat: repeat;
+        padding-bottom: 20px;	
+        padding-top: 25px;
+    }
 
 /*Tablet friendly under 1024*/		
-	@import url(http://css.nlx.org/framework/css/code/def.ui.medium.css) screen and (max-width: 1024px);
+@media screen and (max-width:1024px){
+    body{		
+        min-width: 960px;
+        }
+    .wrapper{
+        width: 98%;
+        margin: 0 auto;
+        }
+    .row{
+        margin-left: -10px;
+        }
+    #bottomLinks .foundationName{
+        display: none;
+        }
+    #bottomLinks a{
+        display: block;
+        float: left;
+        margin: 5px 5px !important;
+        border: 1px solid #fff;
+        padding: 10px 10px;
+        text-align: center;
+        font-size: 1.5em;
+        background: #251C02;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius: 6px;
+        }
+    .topbar-wrapper{
+        height: auto;
+        width: 100%;
+        }
+    .topbar,.topbar-wrapper .topbar{
+        position: static;
+        height: auto;
+        }
+    body > .topbar{
+        margin-top: -30px;
+        }
+        
+    .topbar h3 a, .topbar .brand{
+        margin-left: 5px;
+        }
+    .topbar .container {
+        width: auto;
+        }
+    .topbar h3{
+        position: static;
+        }
+    .topbar .topbar-inner{
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        }	
+    body > .topbar li a,
+    .topbar-wrapper .topbar div > ul li a{
+        display: block;
+        font-size: 1.5em;
+        background: #333;
+        margin: 5px 5px !important;
+        border: 1px solid #fff;
+        padding: 10px 10px;
+        text-align: center;
+        }
+    .topbar-wrapper .topbar .topbar-inner{
+        background: #333;
+        height: auto;
+        margin: 0px;	
+        padding: 0px;
+        }
+    
+    .section li a,
+    .leaderBoard li a,
+    #focusBox li a{
+        background: rgba(255,255,255,.5);
+        border-color: #0069D6;
+        border-width: 2px;
+        border-style: solid;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        padding: 2px 6px;
+        display: inline-block;
+        margin: 2px 0;
+        }
+    .topbar-wrapper ul.menu + .pull-right{
+        margin-top: 5px;
+        }
+    .topbar ul.menu + .pull-right{
+        float: left;
+        }
+    .topbar ul.menu + .pull-right #search{
+        width: 797px;
+        margin: 10px 0px 5px 10px;
+        font-size: 1.5em;
+        height: 32px;
+        }
+    .topbar-wrapper ul.menu + .pull-right #search{			
+        margin: 0px 0px 5px 22px;
+        width: 736px;
+        }
+    .topbar .inline-inputs form #search + input.small{
+        font-size: 1.5em;
+        width: 120px;
+        height: 40px;
+        display: inline-block;
+        margin: 10px 0px 5px 0px;
+        }
+    #bottomLinks .subpageLinks a {
+        margin-left: 0px;
+        }
+    #footerSubLinks{
+        width: auto;
+        }
+    #footerSubLinks .pull-right{
+        float: none;
+        margin: 0 auto;
+        }    
+}
 
 /*Single column under 500*/
-	@import url(http://css.nlx.org/framework/css/code/def.ui.small.css) screen and (max-width: 500px);
+@media screen and (max-width: 500px){
+    body{		
+        min-width: 0px;
+        }	
+    
+    .row{
+        margin-left: 0px;
+        }			
+    .span4,.span5,.span6,.span7,
+    .span9,.span10,.span11.span12,
+    .span-one-fifth,
+    .span-two-fifths,
+    .span-three-fifths{
+        width: auto;
+        margin: 0 10px;
+        display: block;
+        float: none;
+        }		
+    h1{
+        font-size: 2em;
+        }
+    h1.mark span{
+        display: block;
+        }
+    p.col3,p.col2{
+        -moz-column-count:1;
+        -webkit-column-count: 1;
+        column-count: 1;
+        }
+    .h2block{
+        padding-left: 6px;
+        padding-right: 6px;
+        }
+    .section p a,
+    .leaderBoard p a,
+    article p a{
+        background: rgba(255,255,255,.5);
+        border-color: #0069D6;
+        border-width: 2px;
+        /*border-top-width: 0px;
+        border-bottom-width: 0px;*/
+        border-style: solid;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        padding: 0px 6px;
+        display: inline-block;
+        margin: 2px 0;
+        }
+    .section p a.btn,
+    .leaderBoard p a.btn,
+    article p a.btn{
+        padding: 6px 10px 7px 10px;
+        border-width: 1px;
+        }
+    .topbar h3 a, .topbar .brand{
+        float: none;
+        border-width: 0px;
+        }		
+    
+    .topbar p,.topbar ul{
+        padding: 0px;
+        }
+    .topbar div > ul > li, .nav > li{
+        display: block;
+        float: none;
+        }
+    .topbar div > ul, .nav{
+        float: none;			
+        margin: 0px;
+        }		
+    body > .topbar li a,
+    .topbar-wrapper .topbar div > ul li a{
+        display: block;
+        float: left;
+        width: 40%;			
+        font-size: 1.5em;
+        background: #333;
+        margin: 5px 5px !important;
+        border: 1px solid #fff;
+        padding: 10px 10px;
+        text-align: center;
+        }
+    .topbar-wrapper .topbar div > ul li a{
+        width: 39%;
+        }
+    .topbar form{
+        display: none;
+        }
+    #bottomLinks a{
+        display: block;
+        float: none;
+        margin: 5px 0px !important;
+        border: 1px solid #fff;
+        padding: 10px 0px;
+        }
+    .span-two-fifths input[type=text]{
+        width: 100%;
+        }
+}
