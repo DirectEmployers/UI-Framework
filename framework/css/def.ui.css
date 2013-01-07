@@ -290,7 +290,7 @@ Updated Dec 20 2012
         min-width: 960px;
         }
     .wrapper{
-        width: 98%;
+        width: 100%;
         margin: 0 auto;
         }
     .row{
@@ -312,7 +312,7 @@ Updated Dec 20 2012
         -webkit-border-radius:6px;
         border-radius: 6px;
         }
-    .topbar-wrapper{
+    /*.topbar-wrapper{
         height: auto;
         width: 100%;
         }
@@ -347,19 +347,18 @@ Updated Dec 20 2012
         border: 1px solid #fff;
         padding: 10px 10px;
         text-align: center;
-        }
-    .topbar-wrapper .topbar .topbar-inner{
+        }*/
+    /*.topbar-wrapper .topbar .topbar-inner{
         background: #333;
         height: auto;
         margin: 0px;	
         padding: 0px;
-        }
-    
-    .section li a,
-    .leaderBoard li a,
-    #focusBox li a{
+        }*/
+    .footer a,
+    .section a,
+    .topbar li a{
         background: rgba(255,255,255,.5);
-        border-color: #0069D6;
+        /*border-color: #0069D6;*/
         border-width: 2px;
         border-style: solid;
         -webkit-border-radius: 6px;
@@ -369,7 +368,7 @@ Updated Dec 20 2012
         display: inline-block;
         margin: 2px 0;
         }
-    .topbar-wrapper ul.menu + .pull-right{
+    /*.topbar-wrapper ul.menu + .pull-right{
         margin-top: 5px;
         }
     .topbar ul.menu + .pull-right{
@@ -391,19 +390,8 @@ Updated Dec 20 2012
         height: 40px;
         display: inline-block;
         margin: 10px 0px 5px 0px;
-        }
-    #bottomLinks .subpageLinks a {
-        margin-left: 0px;
-        }
-    #footerSubLinks{
-        width: auto;
-        }
-    #footerSubLinks .pull-right{
-        float: none;
-        margin: 0 auto;
-        }    
+        }*/    
 }
-
 /*Single column under 500*/
 @media screen and (max-width: 500px){
     body{		
@@ -415,7 +403,7 @@ Updated Dec 20 2012
         }			
     [class*="span"],
     .span4,.span5,.span6,.span7,
-    .span9,.span10,.span11.span12,
+    .span9,.span10,.span11,.span12,
     .span-one-fifth,
     .span-two-fifths,
     .span-three-fifths{
@@ -446,7 +434,6 @@ Updated Dec 20 2012
         }
     .footer a,
     .section p a,
-    .leaderBoard p a,
     article p a{
         background: rgba(255,255,255,.5);
         /*border-color: #0069D6;*/
@@ -465,8 +452,7 @@ Updated Dec 20 2012
         display: block;
         text-align: center;
         }
-    .section p a.btn,
-    .leaderBoard p a.btn,
+    .section p a.btn
     article p a.btn{
         padding: 6px 10px 7px 10px;
         border-width: 1px;
@@ -476,7 +462,7 @@ Updated Dec 20 2012
         border-width: 0px;
         }		
     
-    .topbar p,.topbar ul{
+    /*.topbar p,.topbar ul{
         padding: 0px;
         }
     .topbar div > ul > li, .nav > li{
@@ -505,14 +491,7 @@ Updated Dec 20 2012
     .topbar form{
         display: none;
         }
-    #bottomLinks a{
-        display: block;
-        float: none;
-        margin: 5px 0px !important;
-        border: 1px solid #fff;
-        padding: 10px 0px;
-        }
     .span-two-fifths input[type=text]{
         width: 100%;
-        }
+        }*/
 }
