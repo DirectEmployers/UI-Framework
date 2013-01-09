@@ -171,6 +171,9 @@ Updated Dec 20 2012
         -webkit-column-count: 2;
         column-count: 2;
         }
+    .hide-desktop{
+        display: none;
+    }
     /*Footer elements*/
     #bottomLinks a{
         color: #fff;
@@ -276,7 +279,7 @@ Updated Dec 20 2012
         }	
         
     /*Default Page level styles*/	
-    .leaderBoard,.subpage{
+    .subpage{
         background-color: #f4f1ee;
         background-position: top left;
         background-repeat: repeat;
@@ -296,102 +299,69 @@ Updated Dec 20 2012
     .row{
         margin-left: -10px;
         }
-    #bottomLinks .foundationName{
+    .subpage{
+        padding-top: 10px;
+        }
+    .hide-desktop{
+        display: block;
+        }
+    .hide-tablet{
         display: none;
         }
-    #bottomLinks a{
-        display: block;
-        float: left;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        font-size: 1.5em;
-        background: #251C02;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius: 6px;
-        }
-    /*.topbar-wrapper{
-        height: auto;
-        width: 100%;
-        }
-    .topbar,.topbar-wrapper .topbar{
-        position: static;
-        height: auto;
-        }
-    body > .topbar{
-        margin-top: -30px;
-        }
-        
-    .topbar h3 a, .topbar .brand{
-        margin-left: 5px;
-        }
-    .topbar .container {
-        width: auto;
-        }
-    .topbar h3{
-        position: static;
-        }
-    .topbar .topbar-inner{
-        height: auto;
-        margin: 0px;
-        padding: 0px;
-        }	
-    body > .topbar li a,
-    .topbar-wrapper .topbar div > ul li a{
-        display: block;
-        font-size: 1.5em;
-        background: #333;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        }*/
-    /*.topbar-wrapper .topbar .topbar-inner{
-        background: #333;
-        height: auto;
-        margin: 0px;	
-        padding: 0px;
-        }*/
     .footer a,
     .section a,
     .topbar li a{
-        background: rgba(255,255,255,.5);
-        /*border-color: #0069D6;*/
-        border-width: 2px;
+        background-color: rgba(255,255,255,.5);
+        border-width: 1px;
         border-style: solid;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        padding: 2px 6px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 6px 25px 7px 25px;
         display: inline-block;
-        margin: 2px 0;
         }
-    /*.topbar-wrapper ul.menu + .pull-right{
-        margin-top: 5px;
-        }
-    .topbar ul.menu + .pull-right{
-        float: left;
-        }
-    .topbar ul.menu + .pull-right #search{
-        width: 797px;
-        margin: 10px 0px 5px 10px;
-        font-size: 1.5em;
-        height: 32px;
-        }
-    .topbar-wrapper ul.menu + .pull-right #search{			
-        margin: 0px 0px 5px 22px;
-        width: 736px;
-        }
-    .topbar .inline-inputs form #search + input.small{
-        font-size: 1.5em;
-        width: 120px;
-        height: 40px;
-        display: inline-block;
-        margin: 10px 0px 5px 0px;
-        }*/    
+    .btn:hover{
+        
+        }    
 }
+/*Portrait under 800px*/
+/*
+This functionality is buggy and needs to be tweaked.
+@media screen and (max-width: 1024px){   
+    body{ min-width: 100%;}
+    .span1,.span2,.span3,
+    .span4,.span5,.span6,.span7,
+    .span9,.span10,.span11,.span12,
+    .span-one-fifth,
+    .span-two-fifths,
+    .span-three-fifths{
+        margin: 0 1%;
+        }    		
+    .span1{ width:  6.25%;}
+    .span2{ width: 14.58%;}
+    .span3{ width: 22.91%;}
+    .span4{ width: 31.25%;}
+    .span5{ width: 39.58%;}
+    .span6{ width: 47.91%;}
+    .span7{ width: 56.25%;}
+    .span8{ width: 64.58%;}
+    .span9{ width: 72.91%;}
+    .span10{width: 81.25%;}
+    .span11{width: 89.58%;}
+    .span12{width: 97.91%;}
+    .offset1{ margin-left:  6.25%;}
+    .offset2{ margin-left: 14.58%;}
+    .offset3{ margin-left: 22.91%;}
+    .offset4{ margin-left: 31.25%;}
+    .offset5{ margin-left: 39.58%;}
+    .offset6{ margin-left: 47.91%;}
+    .offset7{ margin-left: 56.25%;}
+    .offset8{ margin-left: 64.58%;}
+    .offset9{ margin-left: 72.91%;}
+    .offset10{margin-left: 81.25%;}
+    .offset11{margin-left: 89.58%;}
+    .offset12{margin-left: 97.91%;}
+}*/
 /*Single column under 500*/
 @media screen and (max-width: 500px){
     body{		
@@ -432,25 +402,10 @@ Updated Dec 20 2012
         padding-left: 6px;
         padding-right: 6px;
         }
-    .footer a,
-    .section p a,
-    article p a{
-        background: rgba(255,255,255,.5);
-        /*border-color: #0069D6;*/
-        border-width: 2px;
-        /*border-top-width: 0px;
-        border-bottom-width: 0px;*/
-        border-style: solid;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        padding: 0px 6px;
-        display: inline-block;
-        margin: 2px 0;
-        }
     .footer a{
         display: block;
         text-align: center;
+        margin: 5px 0;
         }
     .section p a.btn
     article p a.btn{
@@ -461,37 +416,11 @@ Updated Dec 20 2012
         float: none;
         border-width: 0px;
         }		
-    
-    /*.topbar p,.topbar ul{
-        padding: 0px;
-        }
-    .topbar div > ul > li, .nav > li{
+    .hide-desktop
+    .hide-tablet{
         display: block;
-        float: none;
         }
-    .topbar div > ul, .nav{
-        float: none;			
-        margin: 0px;
-        }		
-    body > .topbar li a,
-    .topbar-wrapper .topbar div > ul li a{
-        display: block;
-        float: left;
-        width: 40%;			
-        font-size: 1.5em;
-        background: #333;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        }
-    .topbar-wrapper .topbar div > ul li a{
-        width: 39%;
-        }
-    .topbar form{
+    .hide-mobile{
         display: none;
         }
-    .span-two-fifths input[type=text]{
-        width: 100%;
-        }*/
 }
