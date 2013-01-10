@@ -416,7 +416,7 @@ This functionality is buggy and needs to be tweaked.
         float: none;
         border-width: 0px;
         }		
-    .hide-desktop
+    .hide-desktop,
     .hide-tablet{
         display: block;
         }
