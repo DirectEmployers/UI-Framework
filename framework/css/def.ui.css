@@ -171,6 +171,9 @@ Updated Dec 20 2012
         -webkit-column-count: 2;
         column-count: 2;
         }
+    .hide-desktop{
+        display: none;
+    }
     /*Footer elements*/
     #bottomLinks a{
         color: #fff;
@@ -276,7 +279,7 @@ Updated Dec 20 2012
         }	
         
     /*Default Page level styles*/	
-    .leaderBoard,.subpage{
+    .subpage{
         background-color: #f4f1ee;
         background-position: top left;
         background-repeat: repeat;
@@ -290,120 +293,34 @@ Updated Dec 20 2012
         min-width: 960px;
         }
     .wrapper{
-        width: 98%;
+        width: 100%;
         margin: 0 auto;
         }
     .row{
         margin-left: -10px;
         }
-    #bottomLinks .foundationName{
+    .subpage{
+        padding-top: 10px;
+        }
+    .hide-desktop{
+        display: block;
+        }
+    .hide-tablet{
         display: none;
         }
-    #bottomLinks a{
-        display: block;
-        float: left;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        font-size: 1.5em;
-        background: #251C02;
-        -moz-border-radius:6px;
-        -webkit-border-radius:6px;
-        border-radius: 6px;
-        }
-    .topbar-wrapper{
-        height: auto;
-        width: 100%;
-        }
-    .topbar,.topbar-wrapper .topbar{
-        position: static;
-        height: auto;
-        }
-    body > .topbar{
-        margin-top: -30px;
-        }
-        
-    .topbar h3 a, .topbar .brand{
-        margin-left: 5px;
-        }
-    .topbar .container {
-        width: auto;
-        }
-    .topbar h3{
-        position: static;
-        }
-    .topbar .topbar-inner{
-        height: auto;
-        margin: 0px;
-        padding: 0px;
-        }	
-    body > .topbar li a,
-    .topbar-wrapper .topbar div > ul li a{
-        display: block;
-        font-size: 1.5em;
-        background: #333;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        }
-    .topbar-wrapper .topbar .topbar-inner{
-        background: #333;
-        height: auto;
-        margin: 0px;	
-        padding: 0px;
-        }
-    
-    .section li a,
-    .leaderBoard li a,
-    #focusBox li a{
-        background: rgba(255,255,255,.5);
-        border-color: #0069D6;
-        border-width: 2px;
+    .footer a,
+    .section a,
+    .topbar li a{
+        background-color: rgba(255,255,255,.5);
+        border-width: 1px;
         border-style: solid;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        padding: 2px 6px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 6px 25px 7px 25px;
         display: inline-block;
-        margin: 2px 0;
-        }
-    .topbar-wrapper ul.menu + .pull-right{
-        margin-top: 5px;
-        }
-    .topbar ul.menu + .pull-right{
-        float: left;
-        }
-    .topbar ul.menu + .pull-right #search{
-        width: 797px;
-        margin: 10px 0px 5px 10px;
-        font-size: 1.5em;
-        height: 32px;
-        }
-    .topbar-wrapper ul.menu + .pull-right #search{			
-        margin: 0px 0px 5px 22px;
-        width: 736px;
-        }
-    .topbar .inline-inputs form #search + input.small{
-        font-size: 1.5em;
-        width: 120px;
-        height: 40px;
-        display: inline-block;
-        margin: 10px 0px 5px 0px;
-        }
-    #bottomLinks .subpageLinks a {
-        margin-left: 0px;
-        }
-    #footerSubLinks{
-        width: auto;
-        }
-    #footerSubLinks .pull-right{
-        float: none;
-        margin: 0 auto;
-        }    
+        }        
 }
-
 /*Single column under 500*/
 @media screen and (max-width: 500px){
     body{		
@@ -413,8 +330,9 @@ Updated Dec 20 2012
     .row{
         margin-left: 0px;
         }			
+    [class*="span"],
     .span4,.span5,.span6,.span7,
-    .span9,.span10,.span11.span12,
+    .span9,.span10,.span11,.span12,
     .span-one-fifth,
     .span-two-fifths,
     .span-three-fifths{
@@ -423,6 +341,11 @@ Updated Dec 20 2012
         display: block;
         float: none;
         }		
+    .offset1,.offset2,.offset3,.offset4,
+    .offset5,.offset6,.offset7,.offset8,
+    .offset9,.offset10,.offset11{
+        margin-left: 10px;
+    }
     h1{
         font-size: 2em;
         }
@@ -438,24 +361,12 @@ Updated Dec 20 2012
         padding-left: 6px;
         padding-right: 6px;
         }
-    .section p a,
-    .leaderBoard p a,
-    article p a{
-        background: rgba(255,255,255,.5);
-        border-color: #0069D6;
-        border-width: 2px;
-        /*border-top-width: 0px;
-        border-bottom-width: 0px;*/
-        border-style: solid;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
-        padding: 0px 6px;
-        display: inline-block;
-        margin: 2px 0;
+    .footer a{
+        display: block;
+        text-align: center;
+        margin: 5px 0;
         }
-    .section p a.btn,
-    .leaderBoard p a.btn,
+    .section p a.btn
     article p a.btn{
         padding: 6px 10px 7px 10px;
         border-width: 1px;
@@ -464,44 +375,11 @@ Updated Dec 20 2012
         float: none;
         border-width: 0px;
         }		
-    
-    .topbar p,.topbar ul{
-        padding: 0px;
-        }
-    .topbar div > ul > li, .nav > li{
+    .hide-desktop,
+    .hide-tablet{
         display: block;
-        float: none;
         }
-    .topbar div > ul, .nav{
-        float: none;			
-        margin: 0px;
-        }		
-    body > .topbar li a,
-    .topbar-wrapper .topbar div > ul li a{
-        display: block;
-        float: left;
-        width: 40%;			
-        font-size: 1.5em;
-        background: #333;
-        margin: 5px 5px !important;
-        border: 1px solid #fff;
-        padding: 10px 10px;
-        text-align: center;
-        }
-    .topbar-wrapper .topbar div > ul li a{
-        width: 39%;
-        }
-    .topbar form{
+    .hide-mobile{
         display: none;
-        }
-    #bottomLinks a{
-        display: block;
-        float: none;
-        margin: 5px 0px !important;
-        border: 1px solid #fff;
-        padding: 10px 0px;
-        }
-    .span-two-fifths input[type=text]{
-        width: 100%;
         }
 }
