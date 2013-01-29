@@ -1,5 +1,6 @@
-Global UI Framework
-(C) 2011-2013 DirectEmployers Foundation
+DirectEmployers Foundations UI Framework
+========================================
+A global UI framework built on top of Bootstrap and jQuery.
 
 Version 2 now available (1/3/13).
 Version 2 of the UI Framework is now in place. This version:
@@ -12,17 +13,38 @@ Documentation is still in its infancy. Please contact Jason Sole with any questi
 /framework
 contains the actual files for inclusion in the UI. This broken into 4 main areas:
 
-css
+/css
 The css files need to make the foundation work. This includes the base bootstrap files (which are included instead of hotlinked in order to control unintended effects due to changes in the bootstrap project).
 
-js
-The base javascript files. This is 95% jQuery right now, with a few custom functions. jQuery is included instead of hot liked for the same reason as Bootstrap.
+/js
+The base javascript files. This is 95% jQuery right now, with a few custom functions. jQuery is included instead of hot linked for the same reason as Bootstrap.
 
-images
+/images
 Any images required by the css and javascript to style elements.
 
-django
+d/jango
 Template and settings helpful to using the framework in a django project.
 
 /documentation
 Contains all documentation and examples
+
+Copyright and License
+---------------------
+Copyright (C) 2012-2013, DirectEmployers Foundation.  This project is provided under
+a triple license that allows you to select the license that is best for your 
+needs. You may choose from:
+
+- The GNU GPL v2.0
+- The GNU GPL v3.0
+- The MIT License
+
+You can read the licenses in the licenses directory.
+
+More information
+----------------
+Information about DirectEmployers Foundation can be found at http://directemployersfoundation.org
+
+
+We are hiring!
+--------------
+http://directemployersfoundation.org/careers
