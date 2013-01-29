@@ -4,9 +4,9 @@ A global UI framework built on top of Bootstrap and jQuery.
 
 Version 2 now available (1/3/13).
 Version 2 of the UI Framework is now in place. This version:
-* adds support for Bootstrap 2.2.1
-* depricates the 16 column grid in favor of the bootstrap 12 column grid
-* reduces the number of @import actions to reduce css load time
+- adds support for Bootstrap 2.2.1
+- depricates the 16 column grid in favor of the bootstrap 12 column grid
+- reduces the number of @import actions to reduce css load time
 
 Documentation is still in its infancy. Please contact Jason Sole with any questions: jason@directemplpoyersfoundation.org.
 
