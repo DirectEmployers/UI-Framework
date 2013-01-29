@@ -4,28 +4,34 @@ A global UI framework built on top of Bootstrap and jQuery.
 
 Version 2 now available (1/3/13).
 Version 2 of the UI Framework is now in place. This version:
- - adds support for Bootstrap 2.2.1
- - depricates the 16 column grid in favor of the bootstrap 12 column grid
- - reduces the number of @import actions to reduce css load time
+* adds support for Bootstrap 2.2.1
+* depricates the 16 column grid in favor of the bootstrap 12 column grid
+* reduces the number of @import actions to reduce css load time
 
 Documentation is still in its infancy. Please contact Jason Sole with any questions: jason@directemplpoyersfoundation.org.
 
 /framework
-contains the actual files for inclusion in the UI. This broken into 4 main areas:
+----------
+Contains the actual files for inclusion in the UI. This broken into 4 main areas:
 
 /css
+----
 The css files need to make the foundation work. This includes the base bootstrap files (which are included instead of hotlinked in order to control unintended effects due to changes in the bootstrap project).
 
 /js
+---
 The base javascript files. This is 95% jQuery right now, with a few custom functions. jQuery is included instead of hot linked for the same reason as Bootstrap.
 
 /images
+-------
 Any images required by the css and javascript to style elements.
 
-d/jango
+/django
+-------
 Template and settings helpful to using the framework in a django project.
 
 /documentation
+--------------
 Contains all documentation and examples
 
 Copyright and License
