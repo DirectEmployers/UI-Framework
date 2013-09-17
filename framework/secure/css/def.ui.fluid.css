@@ -1,0 +1,38 @@
+/*Portrait under 800px*/
+/*
+This functionality is buggy and needs to be tweaked.
+@media screen and (max-width: 1024px){   
+    body{ min-width: 100%;}
+    .span1,.span2,.span3,
+    .span4,.span5,.span6,.span7,
+    .span9,.span10,.span11,.span12,
+    .span-one-fifth,
+    .span-two-fifths,
+    .span-three-fifths{
+        margin: 0 1%;
+        }    		
+    .span1{ width:  6.25%;}
+    .span2{ width: 14.58%;}
+    .span3{ width: 22.91%;}
+    .span4{ width: 31.25%;}
+    .span5{ width: 39.58%;}
+    .span6{ width: 47.91%;}
+    .span7{ width: 56.25%;}
+    .span8{ width: 64.58%;}
+    .span9{ width: 72.91%;}
+    .span10{width: 81.25%;}
+    .span11{width: 89.58%;}
+    .span12{width: 97.91%;}
+    .offset1{ margin-left:  6.25%;}
+    .offset2{ margin-left: 14.58%;}
+    .offset3{ margin-left: 22.91%;}
+    .offset4{ margin-left: 31.25%;}
+    .offset5{ margin-left: 39.58%;}
+    .offset6{ margin-left: 47.91%;}
+    .offset7{ margin-left: 56.25%;}
+    .offset8{ margin-left: 64.58%;}
+    .offset9{ margin-left: 72.91%;}
+    .offset10{margin-left: 81.25%;}
+    .offset11{margin-left: 89.58%;}
+    .offset12{margin-left: 97.91%;}
+}*/
