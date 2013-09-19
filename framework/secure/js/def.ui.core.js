@@ -9,7 +9,7 @@ This UI Framework uses the following libraries:
 *****************************************************************************-*/
 var loader="def.ui.core.js";
 protocol="//"
-if document.location.protocol.indexOf("http") < 0{
+if(document.location.protocol.indexOf("http") < 0){
     protocol="http://" //this allows the framework to run from a local file
 }
 var jsSrc = protocol+"d2e48ltfsb5exy.cloudfront.net/framework/js/";
@@ -21,7 +21,7 @@ var fileList = [
     "code/swfobject.js",
     "code/foundation.js"
 ];
-
+console.log(fileList)
 for(var i=0;i<fileList.length;i++){
     document.write(tagOpen+fileList[i]+tagClose)
 }
