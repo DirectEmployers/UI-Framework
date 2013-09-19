@@ -21,7 +21,6 @@ var fileList = [
     "code/swfobject.js",
     "code/foundation.js"
 ];
-console.log(fileList)
 for(var i=0;i<fileList.length;i++){
     document.write(tagOpen+fileList[i]+tagClose)
 }
