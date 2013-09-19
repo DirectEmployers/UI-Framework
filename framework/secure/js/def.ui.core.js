@@ -12,7 +12,7 @@ protocol="//"
 if(document.location.protocol.indexOf("http") < 0){
     protocol="http://" //this allows the framework to run from a local file
 }
-var jsSrc = protocol+"d2e48ltfsb5exy.cloudfront.net/framework/js/";
+var jsSrc = protocol+"d2e48ltfsb5exy.cloudfront.net/framework/v2/secure/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
