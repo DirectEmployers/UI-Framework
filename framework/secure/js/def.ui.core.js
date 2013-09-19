@@ -8,7 +8,11 @@ This UI Framework uses the following libraries:
  - BootstrapJS
 *****************************************************************************-*/
 var loader="def.ui.core.js";
-var jsSrc = "//d2e48ltfsb5exy.cloudfront.net/framework/js/";
+protocol="//"
+if document.location.protocol.indexOf("http") < 0{
+    protocol="http://" //this allows the framework to run from a local file
+}
+var jsSrc = protocol+"d2e48ltfsb5exy.cloudfront.net/framework/js/";
 var tagOpen = "<script src='"+jsSrc;
 var tagClose= "' type='text/javascript'></script>";
 var fileList = [
