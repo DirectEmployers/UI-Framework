@@ -10,10 +10,10 @@ treatment for tablets. This file should not be edited directly, but rather
 copy everything from def.ui.css and then remove the tablet section.
 *******************************************************************************/
 /*Load the base bootstrap css (v2.2.1)*/
-    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/css/code/bootstrap.221.min.css);	
+    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/secure/css/code/bootstrap.221.min.css);	
 
 /*Load the jquery themeroller css*/
-    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/css/code/jqsmoothness.css);
+    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/secure/css/code/jqsmoothness.css);
 
 /*Document level classes*/
 	.topbar h3 a{
