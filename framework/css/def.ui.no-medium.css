@@ -10,10 +10,10 @@ treatment for tablets. This file should not be edited directly, but rather
 copy everything from def.ui.css and then remove the tablet section.
 *******************************************************************************/
 /*Load the base bootstrap css (v2.2.1)*/
-    @import url(http://css.nlx.org/framework/v2/css/code/bootstrap.221.min.css);	
+    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/css/code/bootstrap.221.min.css);	
 
 /*Load the jquery themeroller css*/
-    @import url(http://css.nlx.org/framework/v2/css/code/jqsmoothness.css);
+    @import url(//d2e48ltfsb5exy.cloudfront.net/framework/v2/css/code/jqsmoothness.css);
 
 /*Document level classes*/
 	.topbar h3 a{
@@ -284,7 +284,7 @@ copy everything from def.ui.css and then remove the tablet section.
     /*Default Page level styles*/	
     .leaderBoard,.subpage{
         background-color: #f4f1ee;
-        background-image: url(http://png.nlx.org/def-static/images/bgpattern.jpg);
+        background-image: url(//d2e48ltfsb5exy.cloudfront.net/def-static/images/bgpattern.jpg);
         background-position: top left;
         background-repeat: repeat;
         padding-bottom: 20px;	
