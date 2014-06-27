@@ -33,7 +33,7 @@ Template and settings helpful to using the framework in a Django project.
 
 /documentation
 --------------
-Contains all documentation and examplesi.
+Contains all documentation and examples.
 
 Copyright and License
 ---------------------
