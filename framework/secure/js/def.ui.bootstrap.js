@@ -9,8 +9,7 @@ This UI Framework uses the following libraries:
 *****************************************************************************-*/
 var loader="def.ui.bootstrap.js";
 var jsSrc = "//d2e48ltfsb5exy.cloudfront.net/framework/js/";
-var tagOpen = "<script src='"+jsSrc;
-var tagClose= "' type='text/javascript'></script>";
+var firstScript = document.getElementsByTagName("script")[0];
 var fileList = [
     "code/bootstrap-alerts.js",
     "code/bootstrap-buttons.js",
@@ -27,5 +26,7 @@ var fileList = [
 ];
 
 for(var i=0;i<fileList.length;i++){
-    document.write(tagOpen+fileList[i]+tagClose)
+    var newScript = document.createElement("script");
+    newScript.src = jsSrc + fileList[i];
+    firstScript.parentNode.insertBefore(newScript, firstScript);
 }

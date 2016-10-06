@@ -8,13 +8,9 @@ This UI Framework uses the following libraries:
  - BootstrapJS
 *****************************************************************************-*/
 var loader="def.ui.bootstrap.js";
-var jsSrc = "//d2e48ltfsb5exy.cloudfront.net/framework/js/";
-var tagOpen = "<script src='"+jsSrc;
-var tagClose= "' type='text/javascript'></script>";
-var fileList = [
-    "code/bootstrap-twipsy.js"
-];
+var jsSrc = "//d2e48ltfsb5exy.cloudfront.net/framework/js/code/bootstrap-twipsy.js";
+var firstScript = document.getElementsByTagName("script")[0];
 
-for(var i=0;i<fileList.length;i++){
-    document.write(tagOpen+fileList[i]+tagClose)
-}
+var newScript = document.createElement("script");
+newScript.src = jsSrc;
+firstScript.parentNode.insertBefore(newScript, firstScript);
